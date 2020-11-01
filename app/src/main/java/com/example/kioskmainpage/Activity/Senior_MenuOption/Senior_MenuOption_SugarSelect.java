@@ -270,7 +270,7 @@ public class Senior_MenuOption_SugarSelect extends AppCompatActivity {
                 }
             case R.id.btn_sweet_sugar:
                 menu_option = "";
-                menu_option = menu_option.concat("선택2: 달달하게        ");
+                menu_option = menu_option.concat("선택1: 달달하게        ");
                 if(category_num == 1){
                     Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
                     intent.putExtra("category",category_num);
@@ -306,7 +306,7 @@ public class Senior_MenuOption_SugarSelect extends AppCompatActivity {
                 }
             case R.id.btn_very_sweet_sugar:
                 menu_option = "";
-                menu_option = menu_option.concat("선택3: 매우 달달하게   ");
+                menu_option = menu_option.concat("선택1: 매우 달달하게   ");
                 if(category_num == 1){
                     Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
                     intent.putExtra("category",category_num);

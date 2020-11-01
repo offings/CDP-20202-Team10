@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -28,13 +28,15 @@
         android:gravity="center"
         android:bufferType="spannable"
         android:lines="1"
-        android:text="당도를 선택해주세요"/>
+        android:text="당도를 선택해주세요"
+        app:layout_constraintTop_toTopOf="parent"/>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/title_view">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -156,15 +158,17 @@
         android:layout_width="370dp"
         android:layout_height="90dp"
         android:layout_gravity="left"
-        android:gravity="center"
-        android:layout_marginTop="100dp"
-        android:clickable="true"
-        android:onClick="onClick"
         android:background="@drawable/back_btn_background"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClick"
         android:text="이전"
-        android:textSize="30sp"
         android:textColor="@color/white"
+        android:textSize="30sp"
         android:textStyle="bold"
-        android:layout_marginLeft="30dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="12dp"/>
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
