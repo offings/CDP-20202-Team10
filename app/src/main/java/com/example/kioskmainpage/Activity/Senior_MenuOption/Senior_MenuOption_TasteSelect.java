@@ -233,8 +233,8 @@ public class Senior_MenuOption_TasteSelect extends AppCompatActivity {
 
     public void onClick(View v){
         switch(v.getId()){
-            case R.id.btn_sweet:
-                menu_option = menu_option.concat("선택2: 달달하게         ");
+            case R.id.btn_soft:
+                menu_option = menu_option.concat("선택2: 연하게         ");
                 if(category_num == 1){
                     Intent intent = new Intent(this, Senior_MenuOption_SizeSelect.class);
                     intent.putExtra("category",category_num);
