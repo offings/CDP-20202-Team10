@@ -1,6 +1,7 @@
 package com.example.kioskmainpage.Activity.Senior_MenuOption;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.speech.RecognitionListener;
@@ -21,18 +22,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.kioskmainpage.Activity.Waiting.Senior_MainActivity;
 import com.example.kioskmainpage.R;
 
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class Senior_MenuSelected_Check extends AppCompatActivity {
+public class Senior_MenuOption_SugarSelect extends AppCompatActivity {
 
     Intent intent;
     int menu_image;
     String menu_name;
     String menu_price;
+    String menu_option = "";
     int category_num;
     TextView menu_name_view;
     TextView menu_price_view;
@@ -44,13 +45,13 @@ public class Senior_MenuSelected_Check extends AppCompatActivity {
     TextView voice_btn;
     TextView announce_textView;
     TextView title_view;
-    String menu_option = " ";
-    int menu_count = 1;
+    public static Activity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_senior_menuselected_check);
+        setContentView(R.layout.activity_senior_menuoption_sugarselect);
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         int uiOptions = getWindow().getDecorView().getSystemUiVisibility();
@@ -66,12 +67,11 @@ public class Senior_MenuSelected_Check extends AppCompatActivity {
         newUiOptions ^= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         getWindow().getDecorView().setSystemUiVisibility(newUiOptions);
 
-        Senior_MainActivity senior_mainActivity = (Senior_MainActivity)Senior_MainActivity.activity;
-        senior_mainActivity.finish();
+        activity = Senior_MenuOption_SugarSelect.this;
 
         intent = getIntent();
         category_num = intent.getExtras().getInt("category");
-        menu_image = intent.getExtras().getInt("menu_image");
+        /*menu_image = intent.getExtras().getInt("menu_image");
         menu_name = intent.getExtras().getString("menu_name");
         menu_price = intent.getExtras().getString("menu_price");
 
@@ -81,13 +81,14 @@ public class Senior_MenuSelected_Check extends AppCompatActivity {
 
         menu_name_view.setText(menu_name);
         menu_price_view.setText(menu_price+"원");
-        menu_image_view.setImageResource(menu_image);
+        menu_image_view.setImageResource(menu_image);*/
 
         title_view = (TextView)findViewById(R.id.title_view);
 
         Spannable span = (Spannable) title_view.getText();
-        span.setSpan(new ForegroundColorSpan(getColor(R.color.light_red)), 6, 8, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
-        span.setSpan(new RelativeSizeSpan(1.1f), 6, 8, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        span.setSpan(new ForegroundColorSpan(getColor(R.color.senior_btn_color)), 0, 2, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        span.setSpan(new ForegroundColorSpan(getColor(R.color.white_blue)), 0, 2, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        span.setSpan(new RelativeSizeSpan(1.1f), 0, 2, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
         if ( Build.VERSION.SDK_INT >= 23 ){
             // 퍼미션 체크
@@ -104,7 +105,7 @@ public class Senior_MenuSelected_Check extends AppCompatActivity {
         voice_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mRecognizer = SpeechRecognizer.createSpeechRecognizer(Senior_MenuSelected_Check.this);
+                mRecognizer = SpeechRecognizer.createSpeechRecognizer(Senior_MenuOption_TempSelect.this);
                 mRecognizer.setRecognitionListener(listener);
                 mRecognizer.startListening(intent);
             }
@@ -116,7 +117,7 @@ public class Senior_MenuSelected_Check extends AppCompatActivity {
                 if(status != TextToSpeech.ERROR) {
 
                     tts.setLanguage(Locale.KOREAN);
-                    tts.speak("이 메뉴를 주문하시겠어요?",TextToSpeech.QUEUE_FLUSH,null);
+                    tts.speak("원하시는 당도를 선택해주세요",TextToSpeech.QUEUE_FLUSH,null);
                     tts.setSpeechRate((float) 0.4);
 
                 }
@@ -231,54 +232,116 @@ public class Senior_MenuSelected_Check extends AppCompatActivity {
 
     public void onClick(View v){
         switch(v.getId()){
-            case R.id.btn_cancel:
-                finish();
-                break;
-            case R.id.btn_checked:
+            case R.id.btn_normal_sugar:
+                menu_option = "";
+                menu_option = menu_option.concat("선택1: 보통           ");
                 if(category_num == 1){
-                    Intent intent = new Intent(this, Senior_MenuOption_SugarSelect.class);
-                    intent.putExtra("category",category_num);
-                    intent.putExtra("menu_image",menu_image);
-                    intent.putExtra("menu_name",menu_name);
-                    intent.putExtra("menu_price",menu_price);
-                    startActivity(intent);
-                    finish();
-                    break;
-                }
-                else if(category_num == 2){
-                    Intent intent = new Intent(this, Senior_MenuOption_SugarSelect.class);
-                    intent.putExtra("category",category_num);
-                    intent.putExtra("menu_image",menu_image);
-                    intent.putExtra("menu_name",menu_name);
-                    intent.putExtra("menu_price",menu_price);
-                    startActivity(intent);
-                    finish();
-                    break;
-                }
-                else if(category_num == 3){
-                    Intent intent = new Intent(this, Senior_OrderListActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                    intent.putExtra("init_type", "add");
+                    Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
                     intent.putExtra("category",category_num);
                     intent.putExtra("menu_image",menu_image);
                     intent.putExtra("menu_name",menu_name);
                     intent.putExtra("menu_price",menu_price);
                     intent.putExtra("menu_option",menu_option);
-                    intent.putExtra("menu_count",menu_count);
                     startActivity(intent);
-                    finish();
+                    //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
                     break;
                 }
-                else if(category_num == 4){
-                    Intent intent = new Intent(this, Senior_MenuOption_SizeSelect.class);
+                else if(category_num == 2){
+                    Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
                     intent.putExtra("category",category_num);
                     intent.putExtra("menu_image",menu_image);
                     intent.putExtra("menu_name",menu_name);
                     intent.putExtra("menu_price",menu_price);
+                    intent.putExtra("menu_option",menu_option);
                     startActivity(intent);
-                    finish();
+                    //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
                     break;
                 }
+                else if(category_num == 3){
+                    Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
+                    intent.putExtra("category",category_num);
+                    intent.putExtra("menu_image",menu_image);
+                    intent.putExtra("menu_name",menu_name);
+                    intent.putExtra("menu_price",menu_price);
+                    intent.putExtra("menu_option",menu_option);
+                    startActivity(intent);
+                    //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
+                    break;
+                }
+            case R.id.btn_sweet_sugar:
+                menu_option = "";
+                menu_option = menu_option.concat("선택2: 달달하게        ");
+                if(category_num == 1){
+                    Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
+                    intent.putExtra("category",category_num);
+                    intent.putExtra("menu_image",menu_image);
+                    intent.putExtra("menu_name",menu_name);
+                    intent.putExtra("menu_price",menu_price);
+                    intent.putExtra("menu_option",menu_option);
+                    startActivity(intent);
+                    //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
+                    break;
+                }
+                else if(category_num == 2){
+                    Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
+                    intent.putExtra("category",category_num);
+                    intent.putExtra("menu_image",menu_image);
+                    intent.putExtra("menu_name",menu_name);
+                    intent.putExtra("menu_price",menu_price);
+                    intent.putExtra("menu_option",menu_option);
+                    startActivity(intent);
+                    //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
+                    break;
+                }
+                else if(category_num == 3){
+                    Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
+                    intent.putExtra("category",category_num);
+                    intent.putExtra("menu_image",menu_image);
+                    intent.putExtra("menu_name",menu_name);
+                    intent.putExtra("menu_price",menu_price);
+                    intent.putExtra("menu_option",menu_option);
+                    startActivity(intent);
+                    //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
+                    break;
+                }
+            case R.id.btn_very_sweet_sugar:
+                menu_option = "";
+                menu_option = menu_option.concat("선택3: 매우 달달하게   ");
+                if(category_num == 1){
+                    Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
+                    intent.putExtra("category",category_num);
+                    intent.putExtra("menu_image",menu_image);
+                    intent.putExtra("menu_name",menu_name);
+                    intent.putExtra("menu_price",menu_price);
+                    intent.putExtra("menu_option",menu_option);
+                    startActivity(intent);
+                    //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
+                    break;
+                }
+                else if(category_num == 2){
+                    Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
+                    intent.putExtra("category",category_num);
+                    intent.putExtra("menu_image",menu_image);
+                    intent.putExtra("menu_name",menu_name);
+                    intent.putExtra("menu_price",menu_price);
+                    intent.putExtra("menu_option",menu_option);
+                    startActivity(intent);
+                    //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
+                    break;
+                }
+                else if(category_num == 3){
+                    Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
+                    intent.putExtra("category",category_num);
+                    intent.putExtra("menu_image",menu_image);
+                    intent.putExtra("menu_name",menu_name);
+                    intent.putExtra("menu_price",menu_price);
+                    intent.putExtra("menu_option",menu_option);
+                    startActivity(intent);
+                    //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
+                    break;
+                }
+            case R.id.back_btn:
+                finish();
         }
     }
     public void onBackPressed() {

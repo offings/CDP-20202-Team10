@@ -70,6 +70,7 @@
         <activity android:name=".Activity.Senior_MenuOption.Senior_MenuOption_SizeSelect" />
         <activity android:name=".Activity.Senior_MenuOption.Senior_MenuSelected_Check" />
         <activity android:name=".Activity.Senior_MenuOption.Senior_MenuOption_TempSelect" />
+        <activity android:name=".Activity.Senior_MenuOption.Senior_MenuOption_SugarSelect" />
         <activity android:name=".Activity.Waiting.Senior_MainActivity" />
         <activity
             android:name=".Activity.Admin.Admin_checkfor_password"
