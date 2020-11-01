@@ -1,48 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/option_layout"
     tools:context=".Activity.Senior_MenuOption.Senior_OrderListActivity">
     
     <LinearLayout
+        android:id="@+id/title_layout"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_marginTop="80dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="주문을 장바구니에 담았어요!"
+            android:text="선택한 메뉴 목록"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="40dp"
-            android:gravity="left"
-            android:paddingLeft="10dp"
             android:layout_gravity="center"/>
 
         <TextView
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:text=" 주문 목록 "
-            android:textStyle="bold"
+            android:id="@+id/title_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주문하신 내역을 확인해주세요"
             android:textColor="@color/black"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="5dp"
             android:textSize="35dp"
             android:gravity="center"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:bufferType="spannable"
+            android:lines="1"/>
 
     </LinearLayout>
     
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginHorizontal="50dp">
+        android:layout_height="650dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="30dp"
+        app:layout_constraintTop_toBottomOf="@id/title_layout"
+        app:layout_constraintBottom_toTopOf="@+id/total_price_layout">
 
         <ListView
             android:id="@+id/listView"
@@ -56,31 +62,34 @@
     </LinearLayout>
     
     <LinearLayout
+        android:id="@+id/total_price_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:orientation="vertical">
+        android:layout_marginBottom="150dp"
+        android:orientation="horizontal"
+        android:gravity="end"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="총액"
+            android:text="총 결제 금액"
             android:paddingRight="50dp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="30dp"
+            android:textSize="35dp"
             android:gravity="right"
             android:layout_gravity="right"/>
 
         <TextView
             android:id="@+id/total_price"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="9000원"
             android:paddingRight="50dp"
             android:textStyle="bold"
             android:textColor="#FE3D3D"
-            android:textSize="40dp"
+            android:textSize="35dp"
             android:gravity="right"
             android:layout_gravity="right"/>
 
@@ -90,40 +99,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="50dp"
         android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="12dp">
 
         <LinearLayout
             android:id="@+id/add_order_btn"
-            android:layout_width="230dp"
-            android:layout_height="230dp"
+            android:layout_width="370dp"
+            android:layout_height="90dp"
             android:orientation="vertical"
             android:clickable="true"
             android:onClick="onClick_add_order"
-            android:background="@drawable/btn_select_background_blue_black">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/plus_img"
-                android:paddingTop="25dp"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp"
-                android:paddingBottom="15dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="10dp" />
+            android:background="@drawable/back_btn_background">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:layout_weight="3"
                 android:text="추가 주문"
-                android:textSize="35dp"
+                android:textSize="30sp"
                 android:textColor="@color/white"
                 android:textStyle="bold"/>
 
@@ -131,42 +129,24 @@
 
         <LinearLayout
             android:id="@+id/payment"
-            android:layout_width="460dp"
-            android:layout_height="230dp"
+            android:layout_width="370dp"
+            android:layout_height="90dp"
             android:orientation="vertical"
-            android:layout_marginLeft="60dp"
             android:clickable="true"
             android:onClick="onClick_payment"
-            android:background="@drawable/btn_select_background_long">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/credit_card_red"
-                android:paddingTop="30dp"
-                android:paddingLeft="125dp"
-                android:paddingRight="125dp"
-                android:paddingBottom="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="10dp"/>
+            android:background="@drawable/btn_red_background">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:layout_weight="3"
                 android:text="결제"
-                android:textSize="35dp"
+                android:textSize="30sp"
                 android:textColor="@color/white"
                 android:textStyle="bold"/>
 
         </LinearLayout>
 
-
-
     </LinearLayout>
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

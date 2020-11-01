@@ -7,6 +7,9 @@ import android.speech.tts.TextToSpeech;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -45,6 +48,7 @@ public class Senior_OrderListActivity extends AppCompatActivity {
     String total_price_text;
     TextView total_price_textview;
     TextView title_text;
+    TextView title_text2;
     private TextToSpeech tts;
     int is_call;
     Handler handler = new Handler();
@@ -93,6 +97,11 @@ public class Senior_OrderListActivity extends AppCompatActivity {
         dataSetting();
         total_price_textview = (TextView)findViewById(R.id.total_price);
         title_text = (TextView)findViewById(R.id.title_text);
+        title_text2 = (TextView)findViewById(R.id.title_text2);
+
+        Spannable span = (Spannable) title_text2.getText();
+        span.setSpan(new ForegroundColorSpan(getColor(R.color.senior_btn_color)), 0, 7, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+
 
         if((category_num == 1 || category_num == 2)&&(is_call==0)){
             Senior_MenuOption_TasteSelect senior_menuOption_tasteSelect = (Senior_MenuOption_TasteSelect)Senior_MenuOption_TasteSelect.activity;
