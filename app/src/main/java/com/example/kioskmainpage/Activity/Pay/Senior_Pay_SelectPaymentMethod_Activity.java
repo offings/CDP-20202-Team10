@@ -231,4 +231,8 @@ public class Senior_Pay_SelectPaymentMethod_Activity extends AppCompatActivity {
     public void onBackPressed() {
         return;
     }
+
+    public void onClick(View view) {
+        finish();
+    }
 }
