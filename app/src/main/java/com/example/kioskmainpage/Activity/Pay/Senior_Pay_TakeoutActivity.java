@@ -66,10 +66,8 @@ public class Senior_Pay_TakeoutActivity extends AppCompatActivity {
 
         title = (TextView)findViewById(R.id.title_view);
         Spannable span = (Spannable) title.getText();
-        span.setSpan(new ForegroundColorSpan(getColor(R.color.white_blue)), 0, 2, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
-        span.setSpan(new ForegroundColorSpan(getColor(R.color.light_green)), 10, 12, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
-        span.setSpan(new RelativeSizeSpan(1.5f), 0, 2, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
-        span.setSpan(new RelativeSizeSpan(1.5f), 10, 12, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        span.setSpan(new ForegroundColorSpan(getColor(R.color.senior_btn_color)), 5, 7, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+//        span.setSpan(new RelativeSizeSpan(1.5f), 0, 2, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
         if ( Build.VERSION.SDK_INT >= 23 ){
             // 퍼미션 체크
