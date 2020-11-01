@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="700dp"
+    android:layout_height="850dp"
+    android:layout_gravity="center"
+    android:background="@drawable/round_background_popup"
+    android:orientation="vertical"
+    tools:context=".Activity.Pay.Senior_Pay_CardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="아래쪽 카드 투입구에&#10;카드를 끝까지 삽입한 후,&#10;'결제 진행'버튼을 눌러주세요"
+            android:textColor="@color/black"
+            android:bufferType="spannable"
+            android:lineSpacingExtra="7dp"
+            android:textSize="33dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/Card_announce_card_imageView"
+            android:layout_width="250dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/card_animation"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/cancel_btn"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:onClick="onClick_cancel"
+                android:background="@drawable/btn_select_background">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/close"
+                    android:layout_gravity="center"
+                    android:paddingTop="30dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingBottom="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="0dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="3"
+                    android:text="취소"
+                    android:textSize="25dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pass_btn"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="90dp"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:onClick="onClick_confirm"
+                android:background="@drawable/btn_select_background_green">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/right_arrow"
+                    android:layout_gravity="center"
+                    android:paddingTop="30dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingBottom="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="0dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="3"
+                    android:text="결제진행"
+                    android:textSize="25dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
