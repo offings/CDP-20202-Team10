@@ -98,8 +98,8 @@ public class Senior_OrderListActivity extends AppCompatActivity {
             Senior_MenuOption_TasteSelect senior_menuOption_tasteSelect = (Senior_MenuOption_TasteSelect)Senior_MenuOption_TasteSelect.activity;
             senior_menuOption_tasteSelect.finish();
 
-            Senior_MenuOption_TempSelect senior_menuOption_tempSelect = (Senior_MenuOption_TempSelect)Senior_MenuOption_TempSelect.activity;
-            senior_menuOption_tempSelect.finish();
+            Senior_MenuOption_SugarSelect senior_menuOption_sugarSelect = (Senior_MenuOption_SugarSelect)Senior_MenuOption_SugarSelect.activity;
+            senior_menuOption_sugarSelect.finish();
         }
 
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
@@ -166,8 +166,8 @@ public class Senior_OrderListActivity extends AppCompatActivity {
                 Senior_MenuOption_TasteSelect senior_menuOption_tasteSelect = (Senior_MenuOption_TasteSelect)Senior_MenuOption_TasteSelect.activity;
                 senior_menuOption_tasteSelect.finish();
 
-                Senior_MenuOption_TempSelect senior_menuOption_tempSelect = (Senior_MenuOption_TempSelect)Senior_MenuOption_TempSelect.activity;
-                senior_menuOption_tempSelect.finish();
+                Senior_MenuOption_SugarSelect senior_menuOption_sugarSelect = (Senior_MenuOption_SugarSelect)Senior_MenuOption_SugarSelect.activity;
+                senior_menuOption_sugarSelect.finish();
             }
 
 

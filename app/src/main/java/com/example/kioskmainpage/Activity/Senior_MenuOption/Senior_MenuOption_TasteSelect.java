@@ -76,20 +76,20 @@ public class Senior_MenuOption_TasteSelect extends AppCompatActivity {
         menu_name = intent.getExtras().getString("menu_name");
         menu_price = intent.getExtras().getString("menu_price");
         menu_option = intent.getExtras().getString("menu_option");
-
+/*
         menu_name_view = (TextView)findViewById(R.id.menu_name_view);
         menu_price_view = (TextView)findViewById(R.id.menu_price_view);
         menu_image_view = (ImageView) findViewById(R.id.menu_image_view);
 
         menu_name_view.setText(menu_name);
         menu_price_view.setText(menu_price+"원");
-        menu_image_view.setImageResource(menu_image);
+        menu_image_view.setImageResource(menu_image);*/
 
         title_view = (TextView)findViewById(R.id.title_view);
 
         Spannable span = (Spannable) title_view.getText();
-        span.setSpan(new ForegroundColorSpan(getColor(R.color.senior_btn_color)), 5, 8, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
-        span.setSpan(new RelativeSizeSpan(1.1f), 5, 8, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        span.setSpan(new ForegroundColorSpan(getColor(R.color.senior_btn_color)), 0, 3, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        span.setSpan(new RelativeSizeSpan(1.1f), 0, 3, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
         if ( Build.VERSION.SDK_INT >= 23 ){
             // 퍼미션 체크
@@ -97,7 +97,7 @@ public class Senior_MenuOption_TasteSelect extends AppCompatActivity {
                     Manifest.permission.RECORD_AUDIO},PERMISSION);
         }
 
-        voice_recordText = (TextView)findViewById(R.id.voice_recordText);
+        /*voice_recordText = (TextView)findViewById(R.id.voice_recordText);
         voice_btn = (TextView)findViewById(R.id.voice_btn);
 
         intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
@@ -110,7 +110,7 @@ public class Senior_MenuOption_TasteSelect extends AppCompatActivity {
                 mRecognizer.setRecognitionListener(listener);
                 mRecognizer.startListening(intent);
             }
-        });
+        });*/
 
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override

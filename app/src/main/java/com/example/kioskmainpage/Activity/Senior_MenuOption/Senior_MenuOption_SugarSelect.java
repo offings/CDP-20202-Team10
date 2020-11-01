@@ -71,11 +71,11 @@ public class Senior_MenuOption_SugarSelect extends AppCompatActivity {
 
         intent = getIntent();
         category_num = intent.getExtras().getInt("category");
-        /*menu_image = intent.getExtras().getInt("menu_image");
+        menu_image = intent.getExtras().getInt("menu_image");
         menu_name = intent.getExtras().getString("menu_name");
         menu_price = intent.getExtras().getString("menu_price");
 
-        menu_name_view = (TextView)findViewById(R.id.menu_name_view);
+        /*menu_name_view = (TextView)findViewById(R.id.menu_name_view);
         menu_price_view = (TextView)findViewById(R.id.menu_price_view);
         menu_image_view = (ImageView) findViewById(R.id.menu_image_view);
 
@@ -87,7 +87,6 @@ public class Senior_MenuOption_SugarSelect extends AppCompatActivity {
 
         Spannable span = (Spannable) title_view.getText();
         span.setSpan(new ForegroundColorSpan(getColor(R.color.senior_btn_color)), 0, 2, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
-        span.setSpan(new ForegroundColorSpan(getColor(R.color.white_blue)), 0, 2, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
         span.setSpan(new RelativeSizeSpan(1.1f), 0, 2, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
         if ( Build.VERSION.SDK_INT >= 23 ){
@@ -257,17 +256,6 @@ public class Senior_MenuOption_SugarSelect extends AppCompatActivity {
                     //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
                     break;
                 }
-                else if(category_num == 3){
-                    Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
-                    intent.putExtra("category",category_num);
-                    intent.putExtra("menu_image",menu_image);
-                    intent.putExtra("menu_name",menu_name);
-                    intent.putExtra("menu_price",menu_price);
-                    intent.putExtra("menu_option",menu_option);
-                    startActivity(intent);
-                    //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
-                    break;
-                }
             case R.id.btn_sweet_sugar:
                 menu_option = "";
                 menu_option = menu_option.concat("선택1: 달달하게        ");
@@ -293,17 +281,6 @@ public class Senior_MenuOption_SugarSelect extends AppCompatActivity {
                     //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
                     break;
                 }
-                else if(category_num == 3){
-                    Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
-                    intent.putExtra("category",category_num);
-                    intent.putExtra("menu_image",menu_image);
-                    intent.putExtra("menu_name",menu_name);
-                    intent.putExtra("menu_price",menu_price);
-                    intent.putExtra("menu_option",menu_option);
-                    startActivity(intent);
-                    //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
-                    break;
-                }
             case R.id.btn_very_sweet_sugar:
                 menu_option = "";
                 menu_option = menu_option.concat("선택1: 매우 달달하게   ");
@@ -319,17 +296,6 @@ public class Senior_MenuOption_SugarSelect extends AppCompatActivity {
                     break;
                 }
                 else if(category_num == 2){
-                    Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
-                    intent.putExtra("category",category_num);
-                    intent.putExtra("menu_image",menu_image);
-                    intent.putExtra("menu_name",menu_name);
-                    intent.putExtra("menu_price",menu_price);
-                    intent.putExtra("menu_option",menu_option);
-                    startActivity(intent);
-                    //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
-                    break;
-                }
-                else if(category_num == 3){
                     Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
                     intent.putExtra("category",category_num);
                     intent.putExtra("menu_image",menu_image);
