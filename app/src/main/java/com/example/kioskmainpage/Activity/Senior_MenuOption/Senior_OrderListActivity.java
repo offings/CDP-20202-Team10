@@ -138,7 +138,7 @@ public class Senior_OrderListActivity extends AppCompatActivity {
                                 total_price_textview.setText(total_price_text+"원");
                                 senior_selectedItem_adapter.notifyDataSetChanged();
                                 if(selected_count==0){
-                                    title_text.setText("장바구니가 텅~ 비었어요");
+                                    title_text2.setText("장바구니가 텅~ 비었어요");
                                 }
                             }
                         });
@@ -157,7 +157,8 @@ public class Senior_OrderListActivity extends AppCompatActivity {
         super.onNewIntent(intent);
         if (null != intent) {
 
-            title_text.setText("주문을 장바구니에 담았어요!");
+            //title_text.setText("주문을 장바구니에 담았어요!");
+            title_text2.setText("주문하신 내역을 확인해주세요");
             category_num = intent.getExtras().getInt("category");
             menu_image = intent.getExtras().getInt("menu_image");
             menu_name = intent.getExtras().getString("menu_name");
