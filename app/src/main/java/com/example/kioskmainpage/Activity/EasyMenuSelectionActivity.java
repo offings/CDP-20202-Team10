@@ -16,6 +16,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Spannable;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.RelativeSizeSpan;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -46,6 +50,12 @@ import android.util.Log;
 public class EasyMenuSelectionActivity extends AppCompatActivity {
 
     Intent intent;
+    int menu_image;
+    String menu_name;
+    String menu_price;
+    String menu_option = "";
+    int category_num;
+    TextView title_view;
     private TextToSpeech tts;
     SpeechRecognizer mRecognizer;
     TextView voice_btn1;
@@ -82,12 +92,17 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
 
         activity = EasyMenuSelectionActivity.this;
 
+        /*intent = getIntent();
+        category_num = intent.getExtras().getInt("category");
+        menu_image = intent.getExtras().getInt("menu_image");
+        menu_name = intent.getExtras().getString("menu_name");
+        menu_price = intent.getExtras().getString("menu_price");
+        menu_option = intent.getExtras().getString("menu_option");*/
+
         recyclerView = findViewById(R.id.menu_type_recyclerview);
         layoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(layoutManager);
         recyclerAdapterMenuType = new RecyclerAdapter_MenuType(arr);
-
-
         recyclerView.setAdapter(recyclerAdapterMenuType);
         recyclerView.setHasFixedSize(true);
 
@@ -97,7 +112,13 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
                     Manifest.permission.RECORD_AUDIO}, PERMISSION);
         }
 
-        voice_recordText1 = (TextView) findViewById(R.id.voice_recordText);
+        title_view = (TextView)findViewById(R.id.title_view);
+
+        Spannable span = (Spannable) title_view.getText();
+        span.setSpan(new ForegroundColorSpan(getColor(R.color.senior_btn_color)), 0, 5, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        span.setSpan(new RelativeSizeSpan(1.1f), 0, 5, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+
+        /*voice_recordText1 = (TextView) findViewById(R.id.voice_recordText);
         voice_btn1 = (TextView) findViewById(R.id.voice_btn);
 
         intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
@@ -110,7 +131,7 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
                 mRecognizer.setRecognitionListener(listener);
                 mRecognizer.startListening(intent);
             }
-        });
+        });*/
 
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
@@ -460,6 +481,7 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
         }
     }
 
+
     public void onBackPressed() {
         return;
     }
@@ -549,4 +571,6 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
         return Temp.toCharArray();
     }
 }
+
+
 
