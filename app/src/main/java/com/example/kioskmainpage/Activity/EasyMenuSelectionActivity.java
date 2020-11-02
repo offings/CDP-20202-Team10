@@ -50,11 +50,6 @@ import android.util.Log;
 public class EasyMenuSelectionActivity extends AppCompatActivity {
 
     Intent intent;
-    int menu_image;
-    String menu_name;
-    String menu_price;
-    String menu_option = "";
-    int category_num;
     TextView title_view;
     private TextToSpeech tts;
     SpeechRecognizer mRecognizer;
@@ -91,13 +86,6 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
         getWindow().getDecorView().setSystemUiVisibility(newUiOptions);
 
         activity = EasyMenuSelectionActivity.this;
-
-        /*intent = getIntent();
-        category_num = intent.getExtras().getInt("category");
-        menu_image = intent.getExtras().getInt("menu_image");
-        menu_name = intent.getExtras().getString("menu_name");
-        menu_price = intent.getExtras().getString("menu_price");
-        menu_option = intent.getExtras().getString("menu_option");*/
 
         recyclerView = findViewById(R.id.menu_type_recyclerview);
         layoutManager = new GridLayoutManager(this, 2);
@@ -150,8 +138,8 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         if (null != intent) {
-            voice_recordText1.setText(null);
-            voice_recordText1.setBackground(null);
+//            voice_recordText1.setText(null);
+//            voice_recordText1.setBackground(null);
             tts.speak("원하시는 종류를 선택해주세요", TextToSpeech.QUEUE_FLUSH, null);
         }
     }
