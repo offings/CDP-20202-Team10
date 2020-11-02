@@ -159,6 +159,9 @@ public class Senior_OrderListActivity extends AppCompatActivity {
 
             //title_text.setText("주문을 장바구니에 담았어요!");
             title_text2.setText("주문하신 내역을 확인해주세요");
+            Spannable span = (Spannable) title_text2.getText();
+            span.setSpan(new ForegroundColorSpan(getColor(R.color.senior_btn_color)), 0, 7, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+
             category_num = intent.getExtras().getInt("category");
             menu_image = intent.getExtras().getInt("menu_image");
             menu_name = intent.getExtras().getString("menu_name");
