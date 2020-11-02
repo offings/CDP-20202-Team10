@@ -83,7 +83,7 @@ public class Senior_SelectedItem_Adapter extends BaseAdapter {
         mprice = myFormatter.format(item_count*item_price);
 
         menuName.setText(myItem.getName());
-        countView.setText(mcount+"개");
+        countView.setText(mcount);
         priceView.setText(mprice+"원");
         menu_optionView.setText(myItem.getOption());
 

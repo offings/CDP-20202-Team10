@@ -242,7 +242,7 @@ public class Senior_MenuOption_SizeSelect extends AppCompatActivity {
         switch(v.getId()){
             case R.id.btn_normal:
                 if(category_num == 1){
-                    menu_option = menu_option.concat("선택3: 보통");
+                    menu_option = menu_option.concat("크기 보통");
                     Intent intent = new Intent(this, Senior_OrderListActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     intent.putExtra("init_type", "add");
@@ -258,7 +258,7 @@ public class Senior_MenuOption_SizeSelect extends AppCompatActivity {
                     break;
                 }
                 else if(category_num == 2){
-                    menu_option = menu_option.concat("선택3: 보통");
+                    menu_option = menu_option.concat("크기 보통");
                     Intent intent = new Intent(this, Senior_OrderListActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     intent.putExtra("init_type", "add");
@@ -274,7 +274,7 @@ public class Senior_MenuOption_SizeSelect extends AppCompatActivity {
                     break;
                 }
                 else if(category_num == 3){
-                    menu_option = menu_option.concat("선택1: 보통");
+                    menu_option = menu_option.concat("크기 보통");
                     Intent intent = new Intent(this, Senior_OrderListActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     intent.putExtra("init_type", "add");
@@ -290,7 +290,7 @@ public class Senior_MenuOption_SizeSelect extends AppCompatActivity {
                     break;
                 }
                 else if(category_num == 4){
-                    menu_option = menu_option.concat("선택1: 보통");
+                    menu_option = menu_option.concat("크기 보통");
                     Intent intent = new Intent(this, Senior_OrderListActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     intent.putExtra("init_type", "add");
@@ -307,7 +307,7 @@ public class Senior_MenuOption_SizeSelect extends AppCompatActivity {
                 }
             case R.id.btn_large:
                 if(category_num == 1){
-                    menu_option = menu_option.concat("선택3: 크게");
+                    menu_option = menu_option.concat("크게");
                     Intent intent = new Intent(this, Senior_OrderListActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     intent.putExtra("init_type", "add");
@@ -323,7 +323,7 @@ public class Senior_MenuOption_SizeSelect extends AppCompatActivity {
                     break;
                 }
                 else if(category_num == 2){
-                    menu_option = menu_option.concat("선택3: 크게");
+                    menu_option = menu_option.concat("크게");
                     Intent intent = new Intent(this, Senior_OrderListActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     intent.putExtra("init_type", "add");
@@ -339,7 +339,7 @@ public class Senior_MenuOption_SizeSelect extends AppCompatActivity {
                     break;
                 }
                 else if(category_num == 3){
-                    menu_option = menu_option.concat("선택1: 크게");
+                    menu_option = menu_option.concat("크게");
                     Intent intent = new Intent(this, Senior_OrderListActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     intent.putExtra("init_type", "add");
@@ -355,7 +355,7 @@ public class Senior_MenuOption_SizeSelect extends AppCompatActivity {
                     break;
                 }
                 else if(category_num == 4){
-                    menu_option = menu_option.concat("선택1: 크게");
+                    menu_option = menu_option.concat("크게");
                     Intent intent = new Intent(this, Senior_OrderListActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     intent.putExtra("init_type", "add");
