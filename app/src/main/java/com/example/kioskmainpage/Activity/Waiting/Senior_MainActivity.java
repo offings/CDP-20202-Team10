@@ -147,6 +147,7 @@ public class Senior_MainActivity extends AppCompatActivity {
 
                 }
             });
+
         intent=getIntent();
         is_call = intent.getExtras().getInt("is_call");
         if(is_call==1) {
