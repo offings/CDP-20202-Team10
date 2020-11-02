@@ -22,7 +22,7 @@
             android:layout_height="70dp"
             android:elevation="6dp"
             android:minHeight="?attr/actionBarSize"
-            android:background="#FE3D3D"
+            android:background="#FF0101"
             app:tabBackground="@drawable/senior_tab_background_selector"
             app:tabGravity="fill"
             app:tabIndicatorHeight="0dp"
