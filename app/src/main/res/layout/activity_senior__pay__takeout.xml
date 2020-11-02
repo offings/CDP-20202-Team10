@@ -54,7 +54,7 @@
             android:layout_height="300dp"
             android:orientation="vertical"
             android:clickable="true"
-            android:background="@drawable/option_size_icon"
+            android:background="@drawable/option_size_icon_6"
             android:onClick="onClick_Hall">
 
             <ImageView
@@ -91,7 +91,7 @@
             android:layout_marginTop="20dp"
             android:clickable="true"
             android:onClick="onClick_TakeOut"
-            android:background="@drawable/option_size_icon">
+            android:background="@drawable/option_size_icon_6">
 
             <ImageView
                 android:layout_width="match_parent"
