@@ -35,6 +35,7 @@ import android.widget.Toolbar;
 import com.example.kioskmainpage.Activity.BestNewMenuActivity;
 import com.example.kioskmainpage.Activity.EasyMenuSelectionActivity;
 import com.example.kioskmainpage.Activity.MainActivity;
+import com.example.kioskmainpage.Activity.Pay.Senior_Pay_TakeoutActivity;
 import com.example.kioskmainpage.Activity.Senior_MenuOption.Senior_MenuSelected_Check;
 import com.example.kioskmainpage.Activity.Senior_MenuOption.Senior_OrderListActivity;
 import com.example.kioskmainpage.Adapter.Senior_MainTab_Adapter;
@@ -53,6 +54,7 @@ import kr.co.shineware.nlp.komoran.model.KomoranResult;
 public class Senior_MainActivity extends AppCompatActivity {
 
     Intent intent;
+    int total_price;
     private TextToSpeech tts;
     SpeechRecognizer mRecognizer;
     final int PERMISSION = 1;
@@ -601,5 +603,19 @@ public class Senior_MainActivity extends AppCompatActivity {
         }
         Temp.replaceAll(" ", "");
         return Temp.toCharArray();
+    }
+
+    public void onClick_back(View view) {
+        finish();
+    }
+
+    public void onClick_payment(View view) {
+        EasyMenuSelectionActivity easyMenuSelectionActivity = (EasyMenuSelectionActivity)EasyMenuSelectionActivity.activity;
+        easyMenuSelectionActivity.finish();
+
+        //Toast.makeText(this, "Payment Result Total : "+ total_price+"원",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, Senior_Pay_TakeoutActivity.class);
+        intent.putExtra("total_price",total_price);
+        startActivity(intent);
     }
 }
