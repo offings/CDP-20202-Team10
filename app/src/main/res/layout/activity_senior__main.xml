@@ -44,6 +44,16 @@
             android:background="@color/transparent" />
     </LinearLayout>
 
+    <TextView
+        android:text="주문 목록"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -97,6 +107,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
 
 </android.support.constraint.ConstraintLayout>
