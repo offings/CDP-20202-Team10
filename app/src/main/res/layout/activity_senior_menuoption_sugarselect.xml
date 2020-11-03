@@ -51,7 +51,7 @@
                 android:layout_width="360dp"
                 android:layout_height="360dp"
                 android:layout_margin="12dp"
-                android:background="@drawable/option_size_icon_4"
+                android:background="@drawable/btn_senior_rect_round"
                 android:clickable="true"
                 android:onClick="onClick"
                 android:orientation="vertical">
@@ -83,7 +83,7 @@
                 android:layout_width="360dp"
                 android:layout_height="360dp"
                 android:layout_margin="12dp"
-                android:background="@drawable/option_size_icon_4"
+                android:background="@drawable/btn_senior_rect_round"
                 android:clickable="true"
                 android:onClick="onClick"
                 android:orientation="vertical">
@@ -120,7 +120,7 @@
                 android:layout_width="720dp"
                 android:layout_height="360dp"
                 android:layout_margin="12dp"
-                android:background="@drawable/option_size_icon_5"
+                android:background="@drawable/btn_senior_rect_round"
                 android:clickable="true"
                 android:onClick="onClick"
                 android:orientation="vertical">

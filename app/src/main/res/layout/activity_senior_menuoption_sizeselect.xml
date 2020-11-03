@@ -50,7 +50,7 @@
             android:layout_margin="12dp"
             android:clickable="true"
             android:onClick="onClick"
-            android:background="@drawable/option_size_icon_3">
+            android:background="@drawable/btn_senior_rect_round">
 
             <ImageView
                 android:id="@+id/btn_normal_image"
@@ -84,7 +84,7 @@
             android:layout_margin="12dp"
             android:clickable="true"
             android:onClick="onClick"
-            android:background="@drawable/option_size_icon_3">
+            android:background="@drawable/btn_senior_rect_round">
 
             <ImageView
                 android:id="@+id/btn_large_image"
