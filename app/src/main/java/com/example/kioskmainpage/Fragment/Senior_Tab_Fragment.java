@@ -60,47 +60,52 @@ public class Senior_Tab_Fragment extends Fragment {
         senior_menuAdapter = new Senior_MenuAdapter(getActivity());
 
         if(mpage == 1) {
-            senior_menuAdapter.addItem(new Senior_MenuItem("아메리카노", "2500", R.drawable.img1_1));
-            senior_menuAdapter.addItem(new Senior_MenuItem("카라멜 마끼아또", "3500", R.drawable.img2_1));
-            senior_menuAdapter.addItem(new Senior_MenuItem("카페모카", "4000", R.drawable.img3_1));
-            senior_menuAdapter.addItem(new Senior_MenuItem("카페라떼", "2800", R.drawable.img4_1));
-            senior_menuAdapter.addItem(new Senior_MenuItem("카페모카", "4300", R.drawable.img5_1));
-            senior_menuAdapter.addItem(new Senior_MenuItem("화이트초코", "5300", R.drawable.img6_1));
-            senior_menuAdapter.addItem(new Senior_MenuItem("아포카토", "4400", R.drawable.img7_1));
-            senior_menuAdapter.addItem(new Senior_MenuItem("리스레스토 비얀코", "5500", R.drawable.img8_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("아메리카노", "2500", R.drawable.imgn1_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("아이스 아메리카노", "2500", R.drawable.imgn2_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("카페라떼", "3000", R.drawable.imgn3_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("아이스 카페라떼", "3000", R.drawable.imgn4_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("카페모카", "3500", R.drawable.imgn5_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("아이스 카페모카", "3500", R.drawable.imgn6_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("카라멜 마끼아또", "4000", R.drawable.imgn7_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("아이스 카라멜 마끼아또", "4000", R.drawable.imgn8_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("자바칩 프라푸치노", "4500", R.drawable.imgn9_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("초콜릿 크림 프라푸치노", "4500", R.drawable.imgn10_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("카라멜 프라푸치노", "4500", R.drawable.imgn11_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("바닐라 크림 프라푸치노", "4500", R.drawable.imgn12_1));
         }
 
-        if(mpage == 2) {
-            senior_menuAdapter.addItem(new Senior_MenuItem("그린 티 크림", "6300", R.drawable.img1_2));
-            senior_menuAdapter.addItem(new Senior_MenuItem("모카 푸라푸치노", "5600", R.drawable.img2_2));
-            senior_menuAdapter.addItem(new Senior_MenuItem("바닐라크림", "4900", R.drawable.img3_2));
-            senior_menuAdapter.addItem(new Senior_MenuItem("에스프레소 프라푸치노", "5800", R.drawable.img4_2));
-            senior_menuAdapter.addItem(new Senior_MenuItem("자바칩 푸라푸치노", "6100", R.drawable.img5_2));
-            senior_menuAdapter.addItem(new Senior_MenuItem("카라멜 푸라푸치노", "5600", R.drawable.img6_2));
-            senior_menuAdapter.addItem(new Senior_MenuItem("화이트 딸기 크림", "5600", R.drawable.img7_2));
-            senior_menuAdapter.addItem(new Senior_MenuItem("초콜릿 크림", "5700", R.drawable.img8_2));
-            senior_menuAdapter.addItem(new Senior_MenuItem("초콜릿 모카", "5700", R.drawable.img9_2));
+       if(mpage == 2) {
+            senior_menuAdapter.addItem(new Senior_MenuItem("딸기 요거트", "5000", R.drawable.imgn1_2));
+            senior_menuAdapter.addItem(new Senior_MenuItem("망고 패션후르츠 블렌디드", "5000", R.drawable.imgn2_2));
+            senior_menuAdapter.addItem(new Senior_MenuItem("자몽 셔벗 블렌디드", "5000", R.drawable.imgn3_2));
+            senior_menuAdapter.addItem(new Senior_MenuItem("쿨 라임 피지오", "5000", R.drawable.imgn4_2));
+            senior_menuAdapter.addItem(new Senior_MenuItem("라임 패션 티", "5000", R.drawable.imgn5_2));
+            senior_menuAdapter.addItem(new Senior_MenuItem("아이스 라임 패션 티", "5000", R.drawable.imgn6_2));
+            senior_menuAdapter.addItem(new Senior_MenuItem("민트 블렌드", "4000", R.drawable.imgn7_2));
+            senior_menuAdapter.addItem(new Senior_MenuItem("얼그레이", "4000", R.drawable.imgn8_2));
+            senior_menuAdapter.addItem(new Senior_MenuItem("캐모마일 블렌드", "5500", R.drawable.imgn9_2));
+           senior_menuAdapter.addItem(new Senior_MenuItem("자몽 허니 블랙 티", "5500", R.drawable.imgn10_2));
+           senior_menuAdapter.addItem(new Senior_MenuItem("히비스커스 블렌드", "5500", R.drawable.imgn11_2));
         }
 
         if(mpage == 3) {
-            senior_menuAdapter.addItem(new Senior_MenuItem("7레이어 가나슈", "4800", R.drawable.img1_3));
-            senior_menuAdapter.addItem(new Senior_MenuItem("레드벨벳 크림치즈", "5500", R.drawable.img2_3));
-            senior_menuAdapter.addItem(new Senior_MenuItem("생크림 카스텔라", "4500", R.drawable.img3_3));
-            senior_menuAdapter.addItem(new Senior_MenuItem("블루베리 쿠키 치즈케이크", "6800", R.drawable.img4_3));
-            senior_menuAdapter.addItem(new Senior_MenuItem("포콜릿 데블스 케이크", "5900", R.drawable.img5_3));
-            senior_menuAdapter.addItem(new Senior_MenuItem("촉촉 생크림 케이크", "5200", R.drawable.img6_3));
-            senior_menuAdapter.addItem(new Senior_MenuItem("크레이프 치즈", "6500", R.drawable.img7_3));
-            senior_menuAdapter.addItem(new Senior_MenuItem("클라우드 치즈", "5500", R.drawable.img8_3));
-            senior_menuAdapter.addItem(new Senior_MenuItem("호두 당근 케이크", "6500", R.drawable.img9_3));
+            senior_menuAdapter.addItem(new Senior_MenuItem("가나슈 케이크", "5000", R.drawable.imgn1_3));
+            senior_menuAdapter.addItem(new Senior_MenuItem("치즈 케이크", "5000", R.drawable.imgn2_3));
+            senior_menuAdapter.addItem(new Senior_MenuItem("블루베리 쿠키 치즈케이크", "5000", R.drawable.imgn3_3));
+            senior_menuAdapter.addItem(new Senior_MenuItem("레드벨벳 크림치즈 케이크", "5000", R.drawable.imgn4_3));
+            senior_menuAdapter.addItem(new Senior_MenuItem("스콘", "2000", R.drawable.imgn5_3));
+            senior_menuAdapter.addItem(new Senior_MenuItem("카스테라", "4000", R.drawable.imgn6_3));
+            senior_menuAdapter.addItem(new Senior_MenuItem("티라미수", "4000", R.drawable.imgn7_3));
         }
 
         if(mpage == 4) {
-            senior_menuAdapter.addItem(new Senior_MenuItem("나이트로 쇼콜라", "6100", R.drawable.img1_4));
-            senior_menuAdapter.addItem(new Senior_MenuItem("나이트로 콜드브루", "5800", R.drawable.img3_4));
-            senior_menuAdapter.addItem(new Senior_MenuItem("돌체 콜드브루", "5800", R.drawable.img4_4));
-            senior_menuAdapter.addItem(new Senior_MenuItem("바닐라크림 콜드브루", "8500", R.drawable.img5_4));
-            senior_menuAdapter.addItem(new Senior_MenuItem("콜드브루 폼", "5800", R.drawable.img9_4));
-            senior_menuAdapter.addItem(new Senior_MenuItem("콜드브루 몰트", "8000", R.drawable.img6_4));
+            senior_menuAdapter.addItem(new Senior_MenuItem("마이 스타벅스 텀블러", "15000", R.drawable.imgn1_4));
+            senior_menuAdapter.addItem(new Senior_MenuItem("그린 워터마크 투고 텀블러", "37000", R.drawable.imgn2_4));
+            senior_menuAdapter.addItem(new Senior_MenuItem("블랙 헤리티지 머그", "11000", R.drawable.imgn3_4));
+            senior_menuAdapter.addItem(new Senior_MenuItem("그린 터비 핸들 텀블러 세트", "48800", R.drawable.imgn4_4));
+            senior_menuAdapter.addItem(new Senior_MenuItem("클래식 투고 텀블러 세트", "37900", R.drawable.imgn5_4));
+            senior_menuAdapter.addItem(new Senior_MenuItem("컨투어 워드마크 텀블러 세트", "37900", R.drawable.imgn6_4));
+            senior_menuAdapter.addItem(new Senior_MenuItem("그린 사이렌 클래식 머그 세트", "38800", R.drawable.imgn7_4));
         }
 
         gridView.setAdapter(senior_menuAdapter);
