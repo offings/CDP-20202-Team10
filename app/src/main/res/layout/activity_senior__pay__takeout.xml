@@ -41,8 +41,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="18dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="150dp"
         android:layout_gravity="center"
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/title2_view"
@@ -88,7 +88,6 @@
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:orientation="vertical"
-            android:layout_marginTop="20dp"
             android:clickable="true"
             android:onClick="onClick_TakeOut"
             android:background="@drawable/option_size_icon_6">
