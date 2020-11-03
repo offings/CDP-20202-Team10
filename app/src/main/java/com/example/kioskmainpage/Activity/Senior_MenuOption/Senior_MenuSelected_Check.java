@@ -270,7 +270,7 @@ public class Senior_MenuSelected_Check extends AppCompatActivity {
                     break;
                 }
                 else if(category_num == 4){
-                    Intent intent = new Intent(this, Senior_MenuOption_SizeSelect.class);
+                    Intent intent = new Intent(this, Senior_OrderListActivity.class);
                     intent.putExtra("category",category_num);
                     intent.putExtra("menu_image",menu_image);
                     intent.putExtra("menu_name",menu_name);
