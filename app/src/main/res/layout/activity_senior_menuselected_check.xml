@@ -101,7 +101,7 @@
                 android:layout_marginRight="40dp"
                 android:clickable="true"
                 android:onClick="onClick"
-                android:background="@drawable/btn_select_background_2">
+                android:background="@drawable/option_size_icon_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -118,10 +118,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:layout_weight="3"
+                    android:layout_weight="2"
                     android:text="취소"
                     android:textSize="30dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textStyle="bold"/>
 
             </LinearLayout>
@@ -134,7 +134,7 @@
                 android:layout_marginLeft="40dp"
                 android:clickable="true"
                 android:onClick="onClick"
-                android:background="@drawable/btn_select_background_green_2">
+                android:background="@drawable/option_size_icon_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -151,10 +151,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:layout_weight="3"
+                    android:layout_weight="2"
                     android:text="확인"
                     android:textSize="30dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textStyle="bold"/>
 
             </LinearLayout>
