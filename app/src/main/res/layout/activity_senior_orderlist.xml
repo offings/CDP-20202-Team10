@@ -23,7 +23,7 @@
             android:text="선택한 메뉴 목록"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="40dp"
+            android:textSize="39dp"
             android:layout_gravity="center"/>
 
         <TextView
@@ -121,7 +121,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="추가 주문"
-                android:textSize="30sp"
+                android:textSize="33dp"
                 android:textColor="@color/white"
                 android:textStyle="bold"/>
 
@@ -141,7 +141,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="결제"
-                android:textSize="30sp"
+                android:textSize="33dp"
                 android:textColor="@color/white"
                 android:textStyle="bold"/>
 

@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="40dp"
+        android:textSize="39dp"
         android:textColor="@color/black"
         android:layout_marginTop="170dp"
         android:textStyle="bold"
@@ -75,7 +75,7 @@
                     android:gravity="center"
                     android:text="보통"
                     android:textColor="@color/black"
-                    android:textSize="30dp" />
+                    android:textSize="33dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -103,7 +103,7 @@
                     android:gravity="center"
                     android:text="달달하게"
                     android:textColor="@color/black"
-                    android:textSize="30dp" />
+                    android:textSize="33dp" />
 
             </LinearLayout>
         </LinearLayout>
@@ -145,7 +145,7 @@
                     android:gravity="center"
                     android:text="매우 달달하게"
                     android:textColor="@color/black"
-                    android:textSize="30dp" />
+                    android:textSize="33dp" />
             </LinearLayout>
 
         </LinearLayout>
@@ -164,7 +164,7 @@
         android:onClick="onClick"
         android:text="이전"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="33dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

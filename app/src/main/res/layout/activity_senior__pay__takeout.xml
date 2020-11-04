@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="40dp"
+        android:textSize="39dp"
         android:layout_marginTop="200dp"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="40dp"
+        android:textSize="39dp"
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
         android:layout_marginBottom="80dp"
@@ -78,7 +78,7 @@
                 android:gravity="center"
                 android:layout_weight="3"
                 android:text="포장해서 먹기"
-                android:textSize="30dp"
+                android:textSize="33dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
         </LinearLayout>
@@ -114,7 +114,7 @@
                 android:gravity="center"
                 android:layout_weight="3"
                 android:text="매장에서 먹기"
-                android:textSize="30dp"
+                android:textSize="33dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
 
@@ -132,7 +132,7 @@
         android:onClick="onClick"
         android:text="이전"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="33dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

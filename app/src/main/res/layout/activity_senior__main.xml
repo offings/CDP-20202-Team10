@@ -81,7 +81,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="취소"
-                android:textSize="30sp"
+                android:textSize="33dp"
                 android:textColor="@color/white"
                 android:textStyle="bold"/>
 
@@ -101,7 +101,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="결제"
-                android:textSize="30sp"
+                android:textSize="33dp"
                 android:textColor="@color/white"
                 android:textStyle="bold"/>
 
