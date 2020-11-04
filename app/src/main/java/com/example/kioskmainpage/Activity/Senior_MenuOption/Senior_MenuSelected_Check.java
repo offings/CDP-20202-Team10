@@ -86,7 +86,7 @@ public class Senior_MenuSelected_Check extends AppCompatActivity {
         title_view = (TextView)findViewById(R.id.title_view);
 
         Spannable span = (Spannable) title_view.getText();
-        span.setSpan(new ForegroundColorSpan(getColor(R.color.light_red)), 6, 8, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        span.setSpan(new ForegroundColorSpan(getColor(R.color.senior_btn_color)), 6, 8, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
         span.setSpan(new RelativeSizeSpan(1.1f), 6, 8, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
         if ( Build.VERSION.SDK_INT >= 23 ){

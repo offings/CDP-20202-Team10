@@ -189,7 +189,7 @@ public class Senior_MainActivity extends AppCompatActivity {
 
                     tts.setLanguage(Locale.KOREAN);
                     if(is_call!=1){
-                        tts.speak("원하시는 메뉴 종류를 선택해 주세요",TextToSpeech.QUEUE_FLUSH,null);
+                        tts.speak("원하시는 메뉴를 선택해 주세요",TextToSpeech.QUEUE_FLUSH,null);
                     }
                     tts.setSpeechRate((float) 0.4);
 
