@@ -271,6 +271,8 @@ public class Senior_MenuSelected_Check extends AppCompatActivity {
                 }
                 else if(category_num == 4){
                     Intent intent = new Intent(this, Senior_OrderListActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                    intent.putExtra("init_type", "add");
                     intent.putExtra("category",category_num);
                     intent.putExtra("menu_image",menu_image);
                     intent.putExtra("menu_name",menu_name);
