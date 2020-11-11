@@ -4,8 +4,8 @@
     <item
         android:state_selected="true"
         android:drawable="@drawable/tab_line_fill" />
-<!--    <item-->
-<!--        android:state_pressed="true"-->
-<!--        android:drawable="@drawable/tab_line_fill_pressed"/>-->
+    <item
+        android:state_pressed="true"
+        android:drawable="@drawable/tab_line_fill_pressed"/>
 
 </selector>
