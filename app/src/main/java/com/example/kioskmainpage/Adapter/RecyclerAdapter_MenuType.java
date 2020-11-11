@@ -2,6 +2,7 @@ package com.example.kioskmainpage.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.v4.view.LayoutInflaterCompat;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,11 +23,13 @@ import com.example.kioskmainpage.R;
 
 public class RecyclerAdapter_MenuType extends RecyclerView.Adapter<RecyclerAdapter_MenuType.MyViewHolder> {
     String []arr;
+    int []arr_img;
 
     Context context;
 
-    public RecyclerAdapter_MenuType(String[] arr) {
+    public RecyclerAdapter_MenuType(String[] arr, int[] arr_img) {
         this.arr = arr;
+        this.arr_img = arr_img;
     }
 
     @NonNull
@@ -40,6 +44,7 @@ public class RecyclerAdapter_MenuType extends RecyclerView.Adapter<RecyclerAdapt
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder viewHolder, int i) {
         viewHolder.textView.setText(arr[i]);
+        viewHolder.imageView.setImageResource(arr_img[i]);
     }
 
     @Override
@@ -47,13 +52,16 @@ public class RecyclerAdapter_MenuType extends RecyclerView.Adapter<RecyclerAdapt
         return arr.length;
     }
     public class MyViewHolder extends RecyclerView.ViewHolder{
+        LinearLayout linearLayout;
         TextView textView;
-        ImageView ImageView;
+        ImageView imageView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView=itemView.findViewById(R.id.menu_type);
-            textView.setOnClickListener(new View.OnClickListener() {
+            linearLayout=itemView.findViewById(R.id.menu_type);
+            imageView=itemView.findViewById(R.id.menu_type_img);
+            textView=itemView.findViewById(R.id.menu_type_text);
+            linearLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Context context = v.getContext();

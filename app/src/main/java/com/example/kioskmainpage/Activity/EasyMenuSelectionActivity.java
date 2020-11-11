@@ -5,6 +5,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Environment;
 import android.speech.RecognitionListener;
@@ -62,6 +63,7 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
     RecyclerAdapter_MenuType recyclerAdapterMenuType;
     Komoran komoran = new Komoran(DEFAULT_MODEL.LIGHT);
     String[] arr = {"커피", "음료", "빵", "기타"};
+    int[] arr_img = {R.drawable.imgn2_1, R.drawable.imgn8_2, R.drawable.imgn6_3, R.drawable.imgn1_4};
     public static Activity activity;
 
     @Override
@@ -90,7 +92,7 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.menu_type_recyclerview);
         layoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerAdapterMenuType = new RecyclerAdapter_MenuType(arr);
+        recyclerAdapterMenuType = new RecyclerAdapter_MenuType(arr, arr_img);
         recyclerView.setAdapter(recyclerAdapterMenuType);
         recyclerView.setHasFixedSize(true);
 
@@ -103,8 +105,8 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
         title_view = (TextView)findViewById(R.id.title_view);
 
         Spannable span = (Spannable) title_view.getText();
-        span.setSpan(new ForegroundColorSpan(getColor(R.color.senior_btn_color)), 0, 5, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
-        span.setSpan(new RelativeSizeSpan(1.1f), 0, 5, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        span.setSpan(new ForegroundColorSpan(getColor(R.color.senior_btn_color)), 5, 7, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        span.setSpan(new RelativeSizeSpan(1.1f), 5, 7, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
         /*voice_recordText1 = (TextView) findViewById(R.id.voice_recordText);
         voice_btn1 = (TextView) findViewById(R.id.voice_btn);

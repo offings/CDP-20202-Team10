@@ -15,21 +15,22 @@
         android:layout_gravity="center"
         android:textSize="39dp"
         android:textColor="@color/black"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="170dp"
         android:textStyle="bold"
         android:gravity="center"
         android:bufferType="spannable"
         android:lines="1"
-        android:text="메뉴 종류를 선택해주세요"
+        android:text="원하시는 종류를 선택해주세요"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <LinearLayout
-        android:layout_width="700dp"
-        android:layout_height="700dp"
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
         android:orientation="vertical"
         android:layout_gravity="center"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="60dp"
         android:gravity="center"
+        android:layout_marginHorizontal="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title_view">
@@ -39,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:layout_marginHorizontal="40dp" />
+            android:layout_marginHorizontal="30dp"/>
 
     </LinearLayout>
    </android.support.constraint.ConstraintLayout>
