@@ -76,11 +76,11 @@ public class Senior_Tab_Fragment extends Fragment {
 
        if(mpage == 2) {
             senior_menuAdapter.addItem(new Senior_MenuItem("딸기 요거트", "5000", R.drawable.imgn1_2));
-            senior_menuAdapter.addItem(new Senior_MenuItem("망고 패션후르츠 블렌디드", "5000", R.drawable.imgn2_2));
+            senior_menuAdapter.addItem(new Senior_MenuItem("망고 블렌디드", "5000", R.drawable.imgn2_2));
             senior_menuAdapter.addItem(new Senior_MenuItem("자몽 셔벗 블렌디드", "5000", R.drawable.imgn3_2));
             senior_menuAdapter.addItem(new Senior_MenuItem("쿨 라임 피지오", "5000", R.drawable.imgn4_2));
             senior_menuAdapter.addItem(new Senior_MenuItem("라임 패션 티", "5000", R.drawable.imgn5_2));
-            senior_menuAdapter.addItem(new Senior_MenuItem("아이스 라임 패션 티", "5000", R.drawable.imgn6_2));
+            senior_menuAdapter.addItem(new Senior_MenuItem("아이스 라임 티", "5000", R.drawable.imgn6_2));
             senior_menuAdapter.addItem(new Senior_MenuItem("민트 블렌드", "4000", R.drawable.imgn7_2));
             senior_menuAdapter.addItem(new Senior_MenuItem("얼그레이", "4000", R.drawable.imgn8_2));
             senior_menuAdapter.addItem(new Senior_MenuItem("캐모마일 블렌드", "5500", R.drawable.imgn9_2));
@@ -91,21 +91,21 @@ public class Senior_Tab_Fragment extends Fragment {
         if(mpage == 3) {
             senior_menuAdapter.addItem(new Senior_MenuItem("가나슈 케이크", "5000", R.drawable.imgn1_3));
             senior_menuAdapter.addItem(new Senior_MenuItem("치즈 케이크", "5000", R.drawable.imgn2_3));
-            senior_menuAdapter.addItem(new Senior_MenuItem("블루베리 쿠키 치즈케이크", "5000", R.drawable.imgn3_3));
-            senior_menuAdapter.addItem(new Senior_MenuItem("레드벨벳 크림치즈 케이크", "5000", R.drawable.imgn4_3));
+            senior_menuAdapter.addItem(new Senior_MenuItem("블루베리 치즈케이크", "5000", R.drawable.imgn3_3));
+            senior_menuAdapter.addItem(new Senior_MenuItem("레드벨벳 케이크", "5000", R.drawable.imgn4_3));
             senior_menuAdapter.addItem(new Senior_MenuItem("스콘", "2000", R.drawable.imgn5_3));
             senior_menuAdapter.addItem(new Senior_MenuItem("카스테라", "4000", R.drawable.imgn6_3));
             senior_menuAdapter.addItem(new Senior_MenuItem("티라미수", "4000", R.drawable.imgn7_3));
         }
 
         if(mpage == 4) {
-            senior_menuAdapter.addItem(new Senior_MenuItem("마이 스타벅스 텀블러", "15000", R.drawable.imgn1_4));
-            senior_menuAdapter.addItem(new Senior_MenuItem("그린 워터마크 투고 텀블러", "37000", R.drawable.imgn2_4));
-            senior_menuAdapter.addItem(new Senior_MenuItem("블랙 헤리티지 머그", "11000", R.drawable.imgn3_4));
-            senior_menuAdapter.addItem(new Senior_MenuItem("그린 터비 핸들 텀블러 세트", "48800", R.drawable.imgn4_4));
-            senior_menuAdapter.addItem(new Senior_MenuItem("클래식 투고 텀블러 세트", "37900", R.drawable.imgn5_4));
-            senior_menuAdapter.addItem(new Senior_MenuItem("컨투어 워드마크 텀블러 세트", "37900", R.drawable.imgn6_4));
-            senior_menuAdapter.addItem(new Senior_MenuItem("그린 사이렌 클래식 머그 세트", "38800", R.drawable.imgn7_4));
+            senior_menuAdapter.addItem(new Senior_MenuItem("스타벅스 텀블러", "15000", R.drawable.imgn1_4));
+            senior_menuAdapter.addItem(new Senior_MenuItem("그린 워터마크 텀블러", "37000", R.drawable.imgn2_4));
+            senior_menuAdapter.addItem(new Senior_MenuItem("블랙 머그", "11000", R.drawable.imgn3_4));
+            senior_menuAdapter.addItem(new Senior_MenuItem("그린 텀블러 세트", "48800", R.drawable.imgn4_4));
+            senior_menuAdapter.addItem(new Senior_MenuItem("클래식 텀블러 세트", "37900", R.drawable.imgn5_4));
+            senior_menuAdapter.addItem(new Senior_MenuItem("컨투어 텀블러 세트", "37900", R.drawable.imgn6_4));
+            senior_menuAdapter.addItem(new Senior_MenuItem("그린 클래식 머그 세트", "38800", R.drawable.imgn7_4));
         }
 
         gridView.setAdapter(senior_menuAdapter);
