@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
@@ -27,6 +28,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,9 +41,12 @@ import com.example.kioskmainpage.Activity.Pay.Senior_Pay_TakeoutActivity;
 import com.example.kioskmainpage.Activity.Senior_MenuOption.Senior_MenuSelected_Check;
 import com.example.kioskmainpage.Activity.Senior_MenuOption.Senior_OrderListActivity;
 import com.example.kioskmainpage.Adapter.Senior_MainTab_Adapter;
+import com.example.kioskmainpage.Adapter.Senior_Main_SelectedItem_Adapter;
+import com.example.kioskmainpage.Adapter.Senior_SelectedItem_Adapter;
 import com.example.kioskmainpage.Fragment.Senior_Tab_Fragment;
 import com.example.kioskmainpage.R;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -53,8 +58,12 @@ import kr.co.shineware.nlp.komoran.model.KomoranResult;
 
 public class Senior_MainActivity extends AppCompatActivity {
 
+    ListView mListView;
     Intent intent;
     int total_price;
+    int selected_count;
+    String total_price_text;
+    TextView total_price_textview;
     private TextToSpeech tts;
     SpeechRecognizer mRecognizer;
     final int PERMISSION = 1;
@@ -68,6 +77,10 @@ public class Senior_MainActivity extends AppCompatActivity {
     public static Activity activity;
     int cccccc=0;
     int is_call;
+
+    Handler handler = new Handler();
+
+    Senior_Main_SelectedItem_Adapter senior_main_selectedItem_adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -180,7 +193,35 @@ public class Senior_MainActivity extends AppCompatActivity {
             finish();
         }
 
+        mListView = (ListView)findViewById(R.id.listView);
+        dataSetting();
 
+        total_price_textview = (TextView)findViewById(R.id.total_price);
+
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(true) {
+                    try {
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                DecimalFormat myFormatter = new DecimalFormat("###,###");
+                                selected_count = senior_main_selectedItem_adapter.getCount();
+                                total_price = senior_main_selectedItem_adapter.getPriceSum();
+                                total_price_text = myFormatter.format(total_price);
+                                total_price_textview.setText(total_price_text+"원");
+                                senior_main_selectedItem_adapter.notifyDataSetChanged();
+                            }
+                        });
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+        thread.start();
 
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
@@ -197,6 +238,20 @@ public class Senior_MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void dataSetting(){
+
+        senior_main_selectedItem_adapter = new Senior_Main_SelectedItem_Adapter();
+/*
+
+        senior_main_selectedItem_adapter.addItem(menu_image, menu_name, menu_price, menu_option, menu_count);
+*/
+
+        mListView.setAdapter(senior_main_selectedItem_adapter);
+        mListView.setVerticalScrollBarEnabled(true);
+
+        senior_main_selectedItem_adapter.notifyDataSetChanged();
     }
 
     private RecognitionListener listener = new RecognitionListener() {

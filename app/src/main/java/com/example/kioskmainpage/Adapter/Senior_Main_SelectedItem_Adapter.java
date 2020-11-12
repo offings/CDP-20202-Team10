@@ -1,8 +1,6 @@
 package com.example.kioskmainpage.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,19 +9,16 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.kioskmainpage.Activity.Waiting.Senior_MainActivity;
-import com.example.kioskmainpage.MenuManage.SelectedMenu;
 import com.example.kioskmainpage.R;
 import com.example.kioskmainpage.Utilities.Senior_SelectedItem;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-public class Senior_SelectedItem_Adapter extends BaseAdapter {
+public class Senior_Main_SelectedItem_Adapter extends BaseAdapter {
 
-    private static ArrayList<Senior_SelectedItem> mItems = new ArrayList<>();
+    private static ArrayList<Senior_SelectedItem> mItems = Senior_SelectedItem_Adapter.getmItems();
     String mcount;
     String mprice;
     int item_count;
@@ -42,7 +37,7 @@ public class Senior_SelectedItem_Adapter extends BaseAdapter {
     public static ArrayList<Senior_SelectedItem> getmItems() { return mItems; }
 
     public static void setmItems(ArrayList<Senior_SelectedItem> mItems) {
-        Senior_SelectedItem_Adapter.mItems = mItems;
+        Senior_Main_SelectedItem_Adapter.mItems = mItems;
     }
 
     @Override
@@ -68,14 +63,11 @@ public class Senior_SelectedItem_Adapter extends BaseAdapter {
 
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.selected_orderlist_item, parent, false);
+            convertView = inflater.inflate(R.layout.main_selected_orderlist_item, parent, false);
         }
 
-        menuImage = (ImageView)convertView.findViewById(R.id.menu_image);
         menuName = (TextView)convertView.findViewById(R.id.menuName);
         countView = (TextView) convertView.findViewById(R.id.countView) ;
-        priceView = (TextView) convertView.findViewById(R.id.priceView) ;
-        menu_optionView = (TextView)convertView.findViewById(R.id.menu_optionView);
         minusButton = (ImageButton)convertView.findViewById(R.id.minusButton);
         plusButton = (ImageButton)convertView.findViewById(R.id.plusButton);
         deleteButton = (Button)convertView.findViewById(R.id.deleteButton);
@@ -90,11 +82,8 @@ public class Senior_SelectedItem_Adapter extends BaseAdapter {
         mcount = ""+item_count;
         mprice = myFormatter.format(item_count*item_price);
 
-        menuImage.setImageResource(myItem.getImage());
         menuName.setText(myItem.getName());
         countView.setText(mcount);
-        priceView.setText(mprice+"원");
-        menu_optionView.setText(myItem.getOption());
 
         minusButton.setOnClickListener(new minusListener(myItem, this));
         plusButton.setOnClickListener(new plusListener(myItem, this));
@@ -120,9 +109,9 @@ public class Senior_SelectedItem_Adapter extends BaseAdapter {
     public class minusListener implements View.OnClickListener {
 
         Senior_SelectedItem senior_selectedItem;
-        Senior_SelectedItem_Adapter senior_selectedItem_adapter;
+        Senior_Main_SelectedItem_Adapter senior_selectedItem_adapter;
 
-        public minusListener(Senior_SelectedItem senior_selectedItem, Senior_SelectedItem_Adapter senior_selectedItem_adapter) {
+        public minusListener(Senior_SelectedItem senior_selectedItem, Senior_Main_SelectedItem_Adapter senior_selectedItem_adapter) {
             this.senior_selectedItem = senior_selectedItem;
             this.senior_selectedItem_adapter = senior_selectedItem_adapter;
         }
@@ -139,9 +128,9 @@ public class Senior_SelectedItem_Adapter extends BaseAdapter {
     public class plusListener implements View.OnClickListener {
 
         Senior_SelectedItem senior_selectedItem;
-        Senior_SelectedItem_Adapter senior_selectedItem_adapter;
+        Senior_Main_SelectedItem_Adapter senior_selectedItem_adapter;
 
-        public plusListener(Senior_SelectedItem senior_selectedItem, Senior_SelectedItem_Adapter senior_selectedItem_adapter) {
+        public plusListener(Senior_SelectedItem senior_selectedItem, Senior_Main_SelectedItem_Adapter senior_selectedItem_adapter) {
             this.senior_selectedItem = senior_selectedItem;
             this.senior_selectedItem_adapter = senior_selectedItem_adapter;
         }
@@ -156,10 +145,10 @@ public class Senior_SelectedItem_Adapter extends BaseAdapter {
     public class deleteListener implements View.OnClickListener {
 
         Senior_SelectedItem senior_selectedItem;
-        Senior_SelectedItem_Adapter senior_selectedItem_adapter;
+        Senior_Main_SelectedItem_Adapter senior_selectedItem_adapter;
         int index;
 
-        public deleteListener(Senior_SelectedItem senior_selectedItem, int index, Senior_SelectedItem_Adapter senior_selectedItem_adapter) {
+        public deleteListener(Senior_SelectedItem senior_selectedItem, int index, Senior_Main_SelectedItem_Adapter senior_selectedItem_adapter) {
             this.senior_selectedItem = senior_selectedItem;
             this.senior_selectedItem_adapter = senior_selectedItem_adapter;
             this.index = index;
