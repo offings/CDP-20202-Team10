@@ -10,8 +10,8 @@
 
     <Button
         android:id="@+id/home_button"
-        android:layout_width="220dp"
-        android:layout_height="90dp"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
         android:background="#0000"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="39dp"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="200dp"
             android:layout_marginBottom="110dp"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -46,18 +46,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:layout_marginHorizontal="30dp">
+            android:layout_marginHorizontal="10dp">
 
             <LinearLayout
                 android:id="@+id/btn_card"
-                android:layout_width="220dp"
-                android:layout_height="220dp"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
                 android:orientation="vertical"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
                 android:clickable="true"
                 android:onClick="onClick_Card"
                 android:background="@drawable/btn_senior_rect_round">
@@ -68,10 +68,6 @@
                     android:layout_weight="1"
                     android:src="@drawable/ic_card2"
                     android:layout_gravity="center"
-                    android:paddingTop="25dp"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp"
-                    android:paddingBottom="10dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
@@ -84,16 +80,15 @@
                     android:layout_weight="2"
                     android:text="카드"
                     android:textSize="33dp"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/btn_money"
-                android:layout_width="220dp"
-                android:layout_height="220dp"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
                 android:orientation="vertical"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 android:clickable="true"
                 android:onClick="onClick_Money"
                 android:background="@drawable/btn_senior_rect_round">
@@ -104,10 +99,6 @@
                     android:layout_weight="1"
                     android:src="@drawable/paper_money2"
                     android:layout_gravity="center"
-                    android:paddingTop="15dp"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:paddingBottom="0dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
@@ -120,15 +111,14 @@
                     android:layout_weight="2"
                     android:text="현금"
                     android:textSize="33dp"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/btn_samsungpay"
-                android:layout_width="220dp"
-                android:layout_height="220dp"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
                 android:orientation="vertical"
                 android:layout_marginRight="20dp"
                 android:clickable="true"
@@ -141,10 +131,6 @@
                     android:layout_weight="1"
                     android:src="@drawable/ic_samsungpay2"
                     android:layout_gravity="center"
-                    android:paddingTop="25dp"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp"
-                    android:paddingBottom="10dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
@@ -157,8 +143,7 @@
                     android:layout_weight="2"
                     android:text="삼성페이"
                     android:textSize="33dp"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -168,8 +153,8 @@
 
     <TextView
         android:id="@+id/back_btn"
-        android:layout_width="740dp"
-        android:layout_height="90dp"
+        android:layout_width="580dp"
+        android:layout_height="70dp"
         android:background="@drawable/back_btn_big_background"
         android:clickable="true"
         android:gravity="center"
@@ -180,7 +165,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginBottom="12dp"/>
 
 

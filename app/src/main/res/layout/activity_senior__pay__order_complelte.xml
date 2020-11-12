@@ -11,17 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="주문이 완료 되었습니다"
-        android:textSize="45dp"
+        android:textSize="40dp"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:gravity="center"
         android:layout_marginTop="170dp"
-        android:layout_marginBottom="100dp">
+        android:layout_marginBottom="20dp">
     </TextView>
 
     <LinearLayout
-        android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_gravity="center"
         android:background="@drawable/order_num_background"
         android:gravity="center_horizontal"
@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="주문 번호"
-            android:textSize="40dp"
+            android:textSize="35dp"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:gravity="center_horizontal"
@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="133"
-            android:textSize="110dp"
+            android:textSize="100dp"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:gravity="center_horizontal"
@@ -58,11 +58,11 @@
         android:layout_height="wrap_content"
         android:text="주문번호를 꼭! 확인해 주세요"
         android:bufferType="spannable"
-        android:textSize="40dp"
+        android:textSize="35dp"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:gravity="center"
-        android:layout_marginTop="110dp">
+        android:layout_marginTop="50dp">
     </TextView>
 
     <TextView
@@ -73,7 +73,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:gravity="center"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="20dp">
     </TextView>
 
 </LinearLayout>

@@ -17,8 +17,8 @@
     -->
     <Button
         android:id="@+id/home_button"
-        android:layout_width="220dp"
-        android:layout_height="90dp"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
         android:background="#0000"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
         android:layout_gravity="center"
         android:textSize="39dp"
         android:textColor="@color/black"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="150dp"
         android:textStyle="bold"
         android:gravity="center"
         android:bufferType="spannable"
@@ -52,14 +52,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/btn_normal_sugar"
-                android:layout_width="360dp"
-                android:layout_height="360dp"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
                 android:layout_margin="12dp"
                 android:background="@drawable/btn_senior_rect_round"
                 android:clickable="true"
@@ -81,7 +81,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
+                    android:layout_weight="2"
                     android:gravity="center"
                     android:text="보통"
                     android:textColor="@color/black"
@@ -90,8 +90,8 @@
 
             <LinearLayout
                 android:id="@+id/btn_sweet_sugar"
-                android:layout_width="360dp"
-                android:layout_height="360dp"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
                 android:layout_margin="12dp"
                 android:background="@drawable/btn_senior_rect_round"
                 android:clickable="true"
@@ -109,7 +109,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
+                    android:layout_weight="2"
                     android:gravity="center"
                     android:text="달달하게"
                     android:textColor="@color/black"
@@ -127,8 +127,8 @@
 
             <LinearLayout
                 android:id="@+id/btn_very_sweet_sugar"
-                android:layout_width="720dp"
-                android:layout_height="360dp"
+                android:layout_width="440dp"
+                android:layout_height="220dp"
                 android:layout_margin="12dp"
                 android:background="@drawable/btn_senior_rect_round"
                 android:clickable="true"
@@ -151,7 +151,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
+                    android:layout_weight="2"
                     android:gravity="center"
                     android:text="매우 달달하게"
                     android:textColor="@color/black"
@@ -162,22 +162,21 @@
 
     </LinearLayout>
 
-
     <TextView
         android:id="@+id/back_btn"
-        android:layout_width="740dp"
-        android:layout_height="90dp"
-        android:background="@drawable/back_btn_big_background"
-        android:clickable="true"
+        android:layout_width="580dp"
+        android:layout_height="70dp"
         android:gravity="center"
+        android:clickable="true"
         android:onClick="onClick"
+        android:background="@drawable/back_btn_big_background"
         android:text="이전"
-        android:textColor="@color/white"
         android:textSize="33dp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginBottom="12dp"/>
 
 </android.support.constraint.ConstraintLayout>
