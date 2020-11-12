@@ -109,8 +109,9 @@
 
         <LinearLayout
             android:id="@+id/add_order_btn"
-            android:layout_width="370dp"
+            android:layout_width="0dp"
             android:layout_height="90dp"
+            android:layout_weight="1"
             android:orientation="vertical"
             android:clickable="true"
             android:onClick="onClick_add_order"
@@ -129,8 +130,9 @@
 
         <LinearLayout
             android:id="@+id/payment"
-            android:layout_width="370dp"
+            android:layout_width="0dp"
             android:layout_height="90dp"
+            android:layout_weight="1"
             android:orientation="vertical"
             android:clickable="true"
             android:onClick="onClick_payment"
