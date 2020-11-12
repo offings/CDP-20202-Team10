@@ -33,14 +33,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="39dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="150dp"
             android:layout_marginBottom="110dp"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:gravity="center"
             android:lines="1"
             android:bufferType="spannable"
-            android:text="결제방법을 선택해주세요"/>
+            android:text="결제 방법을 선택해주세요"/>
 
         <LinearLayout
             android:layout_width="match_parent"

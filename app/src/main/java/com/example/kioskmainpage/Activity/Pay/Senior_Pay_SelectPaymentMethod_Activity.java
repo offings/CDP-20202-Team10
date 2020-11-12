@@ -67,7 +67,7 @@ public class Senior_Pay_SelectPaymentMethod_Activity extends AppCompatActivity {
         title = (TextView)findViewById(R.id.title_view);
         Spannable span = (Spannable) title.getText();
         span.setSpan(new ForegroundColorSpan(getColor(R.color.senior_btn_color)), 0, 4, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
-        span.setSpan(new RelativeSizeSpan(1.5f), 0, 4, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+//        span.setSpan(new RelativeSizeSpan(1.5f), 0, 4, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
         if ( Build.VERSION.SDK_INT >= 23 ){
             // 퍼미션 체크
