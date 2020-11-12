@@ -235,5 +235,10 @@ public class Senior_OrderListActivity extends AppCompatActivity {
     public void onBackPressed() {
         return;
     }
+    public void onClickHome(View view) {
+        Intent intent = new Intent(this, EasyMenuSelectionActivity.class);
+        Senior_SelectedItem_Adapter.getmItems().clear();
+        startActivity(intent);
+    }
 
 }

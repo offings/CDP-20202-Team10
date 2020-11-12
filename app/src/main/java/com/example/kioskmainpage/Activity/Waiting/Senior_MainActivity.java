@@ -674,4 +674,10 @@ public class Senior_MainActivity extends AppCompatActivity {
         intent.putExtra("total_price",total_price);
         startActivity(intent);
     }
+
+    public void onClickHome(View view) {
+        Intent intent = new Intent(this, EasyMenuSelectionActivity.class);
+        Senior_SelectedItem_Adapter.getmItems().clear();
+        startActivity(intent);
+    }
 }

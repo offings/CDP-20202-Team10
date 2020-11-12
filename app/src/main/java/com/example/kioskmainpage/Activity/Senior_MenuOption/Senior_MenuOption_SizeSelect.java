@@ -23,10 +23,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.kioskmainpage.Activity.EasyMenuSelectionActivity;
+import com.example.kioskmainpage.Adapter.Senior_SelectedItem_Adapter;
 import com.example.kioskmainpage.R;
+import com.example.kioskmainpage.Utilities.Senior_SelectedItem;
 
 import java.util.ArrayList;
 import java.util.Locale;
+
+import static android.content.Intent.FLAG_ACTIVITY_REORDER_TO_FRONT;
 
 public class Senior_MenuOption_SizeSelect extends AppCompatActivity {
 
@@ -376,5 +380,11 @@ public class Senior_MenuOption_SizeSelect extends AppCompatActivity {
     }
     public void onBackPressed() {
         return;
+    }
+
+    public void onClickHome(View view) {
+        Intent intent = new Intent(this, EasyMenuSelectionActivity.class);
+        Senior_SelectedItem_Adapter.getmItems().clear();
+        startActivity(intent);
     }
 }
