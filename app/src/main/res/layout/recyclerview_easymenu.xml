@@ -5,17 +5,17 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:gravity="center"
-    android:layout_margin="20dp"
+    android:layout_margin="15dp"
     android:layout_gravity="center">
 
     <LinearLayout
         android:id="@+id/menu_type"
-        android:layout_width="300dp"
-        android:layout_height="360dp"
+        android:layout_width="220dp"
+        android:layout_height="240dp"
         android:orientation="vertical"
         android:background="@drawable/btn_senior_rect_round"
         android:clickable="true"
-        android:padding="30dp">
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/menu_type_img"
