@@ -8,6 +8,7 @@ public class Senior_SelectedItem {
     private int price;
     private int menu_count;
     private String option;
+    private int image;
 
 
     public int getPrice() {
@@ -41,6 +42,10 @@ public class Senior_SelectedItem {
     public void setMenu_count(int menu_count) {
         this.menu_count = menu_count;
     }
+
+    public int getImage() { return image; }
+
+    public void setImage(int image) { this.image = image; }
 
 
 }

@@ -172,7 +172,7 @@ public class Senior_OrderListActivity extends AppCompatActivity {
                 menu_count=1;
             }
             menu_price = Integer.parseInt(m_price);
-            senior_selectedItem_adapter.addItem(menu_name, menu_price, menu_option, menu_count);
+            senior_selectedItem_adapter.addItem(menu_image, menu_name, menu_price, menu_option, menu_count);
             tts.speak("주문이 추가되었습니다", TextToSpeech.QUEUE_FLUSH, null);
 
             if((category_num == 1 || category_num == 2)&&(is_call==0)){
@@ -191,7 +191,7 @@ public class Senior_OrderListActivity extends AppCompatActivity {
 
         senior_selectedItem_adapter = new Senior_SelectedItem_Adapter();
 
-        senior_selectedItem_adapter.addItem(menu_name, menu_price, menu_option, menu_count);
+        senior_selectedItem_adapter.addItem(menu_image, menu_name, menu_price, menu_option, menu_count);
 
         mListView.setAdapter(senior_selectedItem_adapter);
         mListView.setVerticalScrollBarEnabled(false);

@@ -29,6 +29,7 @@ public class Senior_SelectedItem_Adapter extends BaseAdapter {
     int item_count;
     int item_price;
     int init_price;
+    ImageView menuImage;
     TextView menuName;
     TextView countView;
     TextView priceView;
@@ -64,6 +65,7 @@ public class Senior_SelectedItem_Adapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.selected_orderlist_item, parent, false);
         }
 
+        menuImage = (ImageView)convertView.findViewById(R.id.menu_image);
         menuName = (TextView)convertView.findViewById(R.id.menuName);
         countView = (TextView) convertView.findViewById(R.id.countView) ;
         priceView = (TextView) convertView.findViewById(R.id.priceView) ;
@@ -82,6 +84,7 @@ public class Senior_SelectedItem_Adapter extends BaseAdapter {
         mcount = ""+item_count;
         mprice = myFormatter.format(item_count*item_price);
 
+        menuImage.setImageResource(myItem.getImage());
         menuName.setText(myItem.getName());
         countView.setText(mcount);
         priceView.setText(mprice+"원");
@@ -94,10 +97,11 @@ public class Senior_SelectedItem_Adapter extends BaseAdapter {
         return convertView;
     }
 
-    public void addItem(String name, int price, String option, int menu_count) {
+    public void addItem(int image, String name, int price, String option, int menu_count) {
 
         Senior_SelectedItem mItem = new Senior_SelectedItem();
 
+        mItem.setImage(image);
         mItem.setName(name);
         mItem.setPrice(price);
         mItem.setMenu_count(menu_count);
