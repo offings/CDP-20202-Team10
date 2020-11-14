@@ -246,7 +246,7 @@ public class Senior_MenuSelected_Check extends AppCompatActivity {
                     break;
                 }
                 else if(category_num == 2){
-                    Intent intent = new Intent(this, Senior_MenuOption_SugarSelect.class);
+                    Intent intent = new Intent(this, Senior_MenuOption_SizeSelect.class);
                     intent.putExtra("category",category_num);
                     intent.putExtra("menu_image",menu_image);
                     intent.putExtra("menu_name",menu_name);

@@ -82,7 +82,7 @@ public class Senior_MenuOption_SizeSelect extends AppCompatActivity {
         menu_image = intent.getExtras().getInt("menu_image");
         menu_name = intent.getExtras().getString("menu_name");
         menu_price = intent.getExtras().getString("menu_price");
-        if(category_num == 1 || category_num == 2){
+        if(category_num == 1){
             menu_option = intent.getExtras().getString("menu_option");
         }
 

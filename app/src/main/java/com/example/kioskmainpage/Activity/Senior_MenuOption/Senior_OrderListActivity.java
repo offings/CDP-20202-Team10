@@ -103,7 +103,7 @@ public class Senior_OrderListActivity extends AppCompatActivity {
         span.setSpan(new ForegroundColorSpan(getColor(R.color.senior_btn_color)), 0, 7, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
 
-        if((category_num == 1 || category_num == 2)&&(is_call==0)){
+        if((category_num == 1)&&(is_call==0)){
             Senior_MenuOption_TasteSelect senior_menuOption_tasteSelect = (Senior_MenuOption_TasteSelect)Senior_MenuOption_TasteSelect.activity;
             senior_menuOption_tasteSelect.finish();
 
@@ -175,7 +175,7 @@ public class Senior_OrderListActivity extends AppCompatActivity {
             senior_selectedItem_adapter.addItem(menu_image, menu_name, menu_price, menu_option, menu_count);
             tts.speak("주문이 추가되었습니다", TextToSpeech.QUEUE_FLUSH, null);
 
-            if((category_num == 1 || category_num == 2)&&(is_call==0)){
+            if((category_num == 1)&&(is_call==0)){
                 Senior_MenuOption_TasteSelect senior_menuOption_tasteSelect = (Senior_MenuOption_TasteSelect)Senior_MenuOption_TasteSelect.activity;
                 senior_menuOption_tasteSelect.finish();
 

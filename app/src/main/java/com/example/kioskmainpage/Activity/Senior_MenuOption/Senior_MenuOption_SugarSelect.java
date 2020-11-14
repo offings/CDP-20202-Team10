@@ -247,7 +247,7 @@ public class Senior_MenuOption_SugarSelect extends AppCompatActivity {
                     //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
                     break;
                 }
-                else if(category_num == 2){
+                /*else if(category_num == 2){
                     Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
                     intent.putExtra("category",category_num);
                     intent.putExtra("menu_image",menu_image);
@@ -257,7 +257,7 @@ public class Senior_MenuOption_SugarSelect extends AppCompatActivity {
                     startActivity(intent);
                     //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
                     break;
-                }
+                }*/
             case R.id.btn_sweet_sugar:
                 menu_option = "";
                 menu_option = menu_option.concat("달달하게, ");
@@ -272,7 +272,7 @@ public class Senior_MenuOption_SugarSelect extends AppCompatActivity {
                     //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
                     break;
                 }
-                else if(category_num == 2){
+                /*else if(category_num == 2){
                     Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
                     intent.putExtra("category",category_num);
                     intent.putExtra("menu_image",menu_image);
@@ -282,7 +282,7 @@ public class Senior_MenuOption_SugarSelect extends AppCompatActivity {
                     startActivity(intent);
                     //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
                     break;
-                }
+                }*/
             case R.id.btn_very_sweet_sugar:
                 menu_option = "";
                 menu_option = menu_option.concat("매우 달달하게, ");
@@ -297,7 +297,7 @@ public class Senior_MenuOption_SugarSelect extends AppCompatActivity {
                     //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
                     break;
                 }
-                else if(category_num == 2){
+                /*else if(category_num == 2){
                     Intent intent = new Intent(this, Senior_MenuOption_TasteSelect.class);
                     intent.putExtra("category",category_num);
                     intent.putExtra("menu_image",menu_image);
@@ -307,7 +307,7 @@ public class Senior_MenuOption_SugarSelect extends AppCompatActivity {
                     startActivity(intent);
                     //Toast.makeText(this, "Option Selected : "+menu_option,Toast.LENGTH_SHORT).show();
                     break;
-                }
+                }*/
             case R.id.back_btn:
                 finish();
         }
