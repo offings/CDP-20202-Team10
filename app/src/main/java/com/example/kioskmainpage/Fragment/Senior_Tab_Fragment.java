@@ -60,14 +60,14 @@ public class Senior_Tab_Fragment extends Fragment {
         senior_menuAdapter = new Senior_MenuAdapter(getActivity());
 
         if(mpage == 1) {
-            senior_menuAdapter.addItem(new Senior_MenuItem("아메리카노", "2500", R.drawable.imgn1_1));
-            senior_menuAdapter.addItem(new Senior_MenuItem("아이스 아메리카노", "2500", R.drawable.imgn2_1));
-            senior_menuAdapter.addItem(new Senior_MenuItem("카페라떼", "3000", R.drawable.imgn3_1));
-            senior_menuAdapter.addItem(new Senior_MenuItem("아이스 카페라떼", "3000", R.drawable.imgn4_1));
-            senior_menuAdapter.addItem(new Senior_MenuItem("카페모카", "3500", R.drawable.imgn5_1));
-            senior_menuAdapter.addItem(new Senior_MenuItem("아이스 카페모카", "3500", R.drawable.imgn6_1));
-            senior_menuAdapter.addItem(new Senior_MenuItem("카라멜 마끼아또", "4000", R.drawable.imgn7_1));
-            senior_menuAdapter.addItem(new Senior_MenuItem("아이스 카라멜 마끼아또", "4000", R.drawable.imgn8_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("따뜻한 아메리카노", "2500", R.drawable.imgn1_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("차가운 아메리카노", "2500", R.drawable.imgn2_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("따뜻한 카페라떼", "3000", R.drawable.imgn3_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("차가운 카페라떼", "3000", R.drawable.imgn4_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("따뜻한 카페모카", "3500", R.drawable.imgn5_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("차가운 카페모카", "3500", R.drawable.imgn6_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("따뜻한 카라멜 마끼아또", "4000", R.drawable.imgn7_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("차가운 카라멜 마끼아또", "4000", R.drawable.imgn8_1));
             senior_menuAdapter.addItem(new Senior_MenuItem("자바칩 프라푸치노", "4500", R.drawable.imgn9_1));
             senior_menuAdapter.addItem(new Senior_MenuItem("초콜릿 크림 프라푸치노", "4500", R.drawable.imgn10_1));
             senior_menuAdapter.addItem(new Senior_MenuItem("카라멜 프라푸치노", "4500", R.drawable.imgn11_1));

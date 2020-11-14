@@ -33,6 +33,7 @@ import java.util.Locale;
 public class Senior_Pay_TakeoutActivity extends AppCompatActivity {
 
     Intent intent;
+    TextView title_view;
     private TextToSpeech tts;
     SpeechRecognizer mRecognizer;
     final int PERMISSION = 1;
@@ -91,6 +92,7 @@ public class Senior_Pay_TakeoutActivity extends AppCompatActivity {
                 mRecognizer.startListening(intent);
             }
         });*/
+
 
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override

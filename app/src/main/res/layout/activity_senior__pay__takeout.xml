@@ -25,29 +25,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="39dp"
+        android:textColor="@color/black"
         android:layout_marginTop="150dp"
-        android:textColor="@color/black"
         android:textStyle="bold"
         android:gravity="center"
-        android:lines="1"
         android:bufferType="spannable"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="원하시는 방식을"/>
-
-    <TextView
-        android:id="@+id/title2_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="39dp"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/black"
-        android:layout_marginBottom="80dp"
-        android:textStyle="bold"
-        android:gravity="center"
         android:lines="1"
-        app:layout_constraintTop_toBottomOf="@id/title_view"
-        android:text="선택해 주세요"/>
+        android:text="원하시는 방식을 선택해주세요"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -56,25 +41,25 @@
         android:layout_marginTop="70dp"
         android:layout_gravity="center"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/title2_view"
+        app:layout_constraintTop_toBottomOf="@id/title_view"
         android:layout_marginHorizontal="30dp">
 
         <LinearLayout
             android:id="@+id/btn_takeout"
             android:layout_width="250dp"
-            android:layout_height="300dp"
+            android:layout_height="450dp"
             android:orientation="vertical"
             android:clickable="true"
             android:background="@drawable/btn_senior_rect_round"
             android:onClick="onClick_Hall">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="200dp"
+                android:layout_height="380dp"
                 android:background="@drawable/takeout_background"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:layout_marginBottom="19dp" />
@@ -92,7 +77,7 @@
         <LinearLayout
             android:id="@+id/btn_here"
             android:layout_width="250dp"
-            android:layout_height="300dp"
+            android:layout_height="450dp"
             android:orientation="vertical"
             android:layout_marginLeft="30dp"
             android:clickable="true"
@@ -100,12 +85,12 @@
             android:background="@drawable/btn_senior_rect_round">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="250dp"
+                android:layout_height="380dp"
                 android:layout_weight="1"
                 android:background="@drawable/here_background"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="19dp"/>
