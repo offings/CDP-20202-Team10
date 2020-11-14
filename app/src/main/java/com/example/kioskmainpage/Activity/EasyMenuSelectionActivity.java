@@ -108,7 +108,7 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
         span.setSpan(new ForegroundColorSpan(getColor(R.color.senior_btn_color)), 5, 7, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
         span.setSpan(new RelativeSizeSpan(1.1f), 5, 7, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
-        /*voice_recordText1 = (TextView) findViewById(R.id.voice_recordText);
+        voice_recordText1 = (TextView) findViewById(R.id.voice_recordText);
         voice_btn1 = (TextView) findViewById(R.id.voice_btn);
 
         intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
@@ -121,7 +121,7 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
                 mRecognizer.setRecognitionListener(listener);
                 mRecognizer.startListening(intent);
             }
-        });*/
+        });
 
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
