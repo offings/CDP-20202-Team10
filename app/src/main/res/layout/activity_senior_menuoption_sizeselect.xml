@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/option_layout"
     tools:context=".Activity.Senior_MenuOption.Senior_MenuOption_SizeSelect">
 
@@ -25,6 +24,27 @@
         app:layout_constraintTop_toTopOf="parent"
         android:onClick="onClickHome"/>
 
+    <TextView
+        android:id="@+id/voice_btn"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:text=" "
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/home_button"/>
+
+    <TextView
+        android:id="@+id/voice_recordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#FF4E00"
+        android:textSize="22dp"
+        android:paddingHorizontal="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/voice_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="100dp"/>
 
     <TextView
         android:id="@+id/title_view"
@@ -68,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:src="@drawable/normal_size_2"
-                android:paddingTop="0dp"
+                android:paddingTop="20dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="0dp"
