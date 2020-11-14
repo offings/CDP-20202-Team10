@@ -65,7 +65,7 @@
                     android:layout_weight="1"
                     android:src="@drawable/ic_card2"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="19dp"/>
@@ -96,7 +96,7 @@
                     android:layout_weight="1"
                     android:src="@drawable/paper_money2"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="19dp"/>
