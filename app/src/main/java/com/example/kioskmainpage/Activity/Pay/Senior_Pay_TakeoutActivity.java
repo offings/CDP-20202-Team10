@@ -78,7 +78,7 @@ public class Senior_Pay_TakeoutActivity extends AppCompatActivity {
                     Manifest.permission.RECORD_AUDIO},PERMISSION);
         }
 
-        voice_recordText = (TextView)findViewById(R.id.voice_recordText);
+        /*voice_recordText = (TextView)findViewById(R.id.voice_recordText);
         voice_btn = (TextView)findViewById(R.id.voice_btn);
 
         intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
@@ -91,7 +91,7 @@ public class Senior_Pay_TakeoutActivity extends AppCompatActivity {
                 mRecognizer.setRecognitionListener(listener);
                 mRecognizer.startListening(intent);
             }
-        });
+        });*/
 
 
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
@@ -109,7 +109,7 @@ public class Senior_Pay_TakeoutActivity extends AppCompatActivity {
 
     }
 
-    private RecognitionListener listener = new RecognitionListener() {
+    /*private RecognitionListener listener = new RecognitionListener() {
         @Override
         public void onReadyForSpeech(Bundle params) {
             //Toast.makeText(getApplicationContext(),"음성인식을 시작합니다.",Toast.LENGTH_SHORT).show();
@@ -199,7 +199,7 @@ public class Senior_Pay_TakeoutActivity extends AppCompatActivity {
 
         @Override
         public void onEvent(int eventType, Bundle params) {}
-    };
+    };*/
 
     @Override
     protected void onDestroy() {
