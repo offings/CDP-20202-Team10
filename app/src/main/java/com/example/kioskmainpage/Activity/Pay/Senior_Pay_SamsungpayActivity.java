@@ -56,7 +56,7 @@ public class Senior_Pay_SamsungpayActivity extends AppCompatActivity {
 
         title = (TextView)findViewById(R.id.title_view);
         Spannable span = (Spannable) title.getText();
-        span.setSpan(new ForegroundColorSpan(getColor(R.color.light_green)), 35, 42, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        span.setSpan(new ForegroundColorSpan(getColor(R.color.red)), 35, 42, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
         //span.setSpan(new RelativeSizeSpan(1.5f), 0, 4, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {

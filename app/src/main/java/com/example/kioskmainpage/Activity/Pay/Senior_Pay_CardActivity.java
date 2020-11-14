@@ -55,7 +55,7 @@ public class Senior_Pay_CardActivity extends AppCompatActivity {
 
         title = (TextView)findViewById(R.id.title_view);
         Spannable span = (Spannable) title.getText();
-        span.setSpan(new ForegroundColorSpan(getColor(R.color.light_green)), 27, 34, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        span.setSpan(new ForegroundColorSpan(getColor(R.color.red)), 27, 34, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
         //span.setSpan(new RelativeSizeSpan(1.5f), 0, 4, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
