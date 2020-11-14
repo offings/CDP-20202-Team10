@@ -108,7 +108,7 @@ public class Senior_MenuOption_SizeSelect extends AppCompatActivity {
                     Manifest.permission.RECORD_AUDIO},PERMISSION);
         }
 
-        /*voice_recordText = (TextView)findViewById(R.id.voice_recordText);
+        voice_recordText = (TextView)findViewById(R.id.voice_recordText);
         voice_btn = (TextView)findViewById(R.id.voice_btn);
 
         intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
@@ -121,7 +121,7 @@ public class Senior_MenuOption_SizeSelect extends AppCompatActivity {
                 mRecognizer.setRecognitionListener(listener);
                 mRecognizer.startListening(intent);
             }
-        });*/
+        });
 
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override

@@ -75,9 +75,8 @@ public class Senior_Pay_SelectPaymentMethod_Activity extends AppCompatActivity {
                     Manifest.permission.RECORD_AUDIO},PERMISSION);
         }
 
-//        voice_recordText = (TextView)findViewById(R.id.voice_recordText);
-//        voice_btn = (TextView)findViewById(R.id.voice_btn);
-/*
+        voice_recordText = (TextView)findViewById(R.id.voice_recordText);
+        voice_btn = (TextView)findViewById(R.id.voice_btn);
         intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE,getPackageName());
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE,"ko-KR");
@@ -88,7 +87,7 @@ public class Senior_Pay_SelectPaymentMethod_Activity extends AppCompatActivity {
                 mRecognizer.setRecognitionListener(listener);
                 mRecognizer.startListening(intent);
             }
-        });*/
+        });
 
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
@@ -104,7 +103,7 @@ public class Senior_Pay_SelectPaymentMethod_Activity extends AppCompatActivity {
         });
     }
 
-        /*
+
     private RecognitionListener listener = new RecognitionListener() {
         @Override
         public void onReadyForSpeech(Bundle params) {
@@ -195,7 +194,7 @@ public class Senior_Pay_SelectPaymentMethod_Activity extends AppCompatActivity {
 
         @Override
         public void onEvent(int eventType, Bundle params) {}
-    };*/
+    };
 
     @Override
     protected void onDestroy() {
