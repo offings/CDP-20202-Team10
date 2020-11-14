@@ -63,7 +63,7 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
     RecyclerAdapter_MenuType recyclerAdapterMenuType;
     Komoran komoran = new Komoran(DEFAULT_MODEL.LIGHT);
     String[] arr = {"커피", "음료", "빵", "기타"};
-    int[] arr_img = {R.drawable.imgn2_1, R.drawable.imgn8_2, R.drawable.imgn6_3, R.drawable.imgn1_4};
+    int[] arr_img = {R.drawable.imgn2_1, R.drawable.imgn10_2, R.drawable.imgn6_3, R.drawable.imgn1_4};
     public static Activity activity;
 
     @Override
