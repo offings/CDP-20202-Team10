@@ -9,9 +9,19 @@
     tools:context=".Activity.Waiting.Senior_MainActivity">
 
     <Button
+        android:id="@+id/video_button"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+        android:background="#0000"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/home_button"
+        android:onClick="onClickVideo"/>
+
+    <Button
         android:id="@+id/home_button"
         android:layout_width="180dp"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
         android:background="#0000"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,8 +31,8 @@
 
     <TextView
         android:id="@+id/voice_btn"
-        android:layout_width="180dp"
-        android:layout_height="60dp"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
         android:clickable="true"
         android:text=" "
         app:layout_constraintTop_toTopOf="parent"

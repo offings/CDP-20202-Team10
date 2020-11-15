@@ -242,6 +242,7 @@ public class Senior_OrderListActivity extends AppCompatActivity {
     }
 
     public void onClickVideo(View view) {
-
+        Intent vedio_intent = new Intent(this, Senior_Video_Activity.class);
+        startActivity(vedio_intent);
     }
 }

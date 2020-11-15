@@ -40,6 +40,7 @@ import com.example.kioskmainpage.Activity.MainActivity;
 import com.example.kioskmainpage.Activity.Pay.Senior_Pay_TakeoutActivity;
 import com.example.kioskmainpage.Activity.Senior_MenuOption.Senior_MenuSelected_Check;
 import com.example.kioskmainpage.Activity.Senior_MenuOption.Senior_OrderListActivity;
+import com.example.kioskmainpage.Activity.Senior_MenuOption.Senior_Video_Activity;
 import com.example.kioskmainpage.Adapter.Senior_MainTab_Adapter;
 import com.example.kioskmainpage.Adapter.Senior_Main_SelectedItem_Adapter;
 import com.example.kioskmainpage.Adapter.Senior_SelectedItem_Adapter;
@@ -681,5 +682,10 @@ public class Senior_MainActivity extends AppCompatActivity {
         Senior_SelectedItem_Adapter.getmItems().clear();
         startActivity(intent);
         finish();
+    }
+
+    public void onClickVideo(View view) {
+        Intent vedio_intent = new Intent(this, Senior_Video_Activity.class);
+        startActivity(vedio_intent);
     }
 }

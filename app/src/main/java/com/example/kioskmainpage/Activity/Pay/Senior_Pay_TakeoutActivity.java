@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.example.kioskmainpage.Activity.EasyMenuSelectionActivity;
 import com.example.kioskmainpage.Activity.Senior_MenuOption.Senior_MenuOption_SizeSelect;
 import com.example.kioskmainpage.Activity.Senior_MenuOption.Senior_OrderListActivity;
+import com.example.kioskmainpage.Activity.Senior_MenuOption.Senior_Video_Activity;
 import com.example.kioskmainpage.Adapter.Senior_SelectedItem_Adapter;
 import com.example.kioskmainpage.R;
 
@@ -242,5 +243,10 @@ public class Senior_Pay_TakeoutActivity extends AppCompatActivity {
         Intent intent = new Intent(this, EasyMenuSelectionActivity.class);
         Senior_SelectedItem_Adapter.getmItems().clear();
         startActivity(intent);
+    }
+
+    public void onClickVideo(View view) {
+        Intent vedio_intent = new Intent(this, Senior_Video_Activity.class);
+        startActivity(vedio_intent);
     }
 }

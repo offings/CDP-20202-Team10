@@ -320,4 +320,9 @@ public class Senior_MenuOption_SugarSelect extends AppCompatActivity {
         Senior_SelectedItem_Adapter.getmItems().clear();
         startActivity(intent);
     }
+
+    public void onClickVideo(View view) {
+        Intent vedio_intent = new Intent(this, Senior_Video_Activity.class);
+        startActivity(vedio_intent);
+    }
 }
