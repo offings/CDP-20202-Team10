@@ -13,6 +13,8 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.kioskmainpage.Activity.Pay.Senior_Pay_Loading;
+import com.example.kioskmainpage.Activity.Waiting.Senior_MainActivity;
 import com.example.kioskmainpage.R;
 
 import java.io.IOException;
@@ -23,7 +25,7 @@ public class Senior_Video_Activity extends AppCompatActivity {
     private TextView title;
     private SurfaceHolder mSurfaceHolder;
     private String mSdPath = Environment.getExternalStorageDirectory().getAbsolutePath();
-    private String mVideoFile = “menu.mp4”;
+    private String mVideoFile ="menu.mp4";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +33,7 @@ public class Senior_Video_Activity extends AppCompatActivity {
 
         title = (TextView)findViewById(R.id.title_view);
         Spannable span = (Spannable) title.getText();
-        span.setSpan(new ForegroundColorSpan(getColor(R.color.red)), 27, 34, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        span.setSpan(new ForegroundColorSpan(getColor(R.color.red)), 5, 9, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
         mSurfaceView = (SurfaceView)findViewById(R.id.surfaceView);
         mSurfaceHolder = mSurfaceView.getHolder();
@@ -49,6 +51,9 @@ public class Senior_Video_Activity extends AppCompatActivity {
     }
 
     public void stopVideo(View view) {
+        Intent intent = new Intent(this, Senior_MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     public void startVideo(View view) {
