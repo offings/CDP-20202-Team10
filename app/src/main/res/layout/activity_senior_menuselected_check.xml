@@ -126,7 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="결제"
+                android:text="주문"
                 android:textSize="33dp"
                 android:textColor="@color/white"
                 android:textStyle="bold"/>
