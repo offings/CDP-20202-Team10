@@ -48,7 +48,7 @@
                 android:layout_height="70dp"
                 android:orientation="vertical"
                 android:clickable="true"
-                android:onClick="onClick_cancel"
+                android:onClick="stopVideo"
                 android:background="@drawable/back_btn_background">
 
                 <TextView
@@ -69,7 +69,7 @@
                 android:layout_height="70dp"
                 android:orientation="vertical"
                 android:clickable="true"
-                android:onClick="onClick_confirm"
+                android:onClick="startVideo"
                 android:background="@drawable/btn_red_background">
 
                 <TextView
