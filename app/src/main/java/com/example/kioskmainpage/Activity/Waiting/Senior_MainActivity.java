@@ -166,11 +166,11 @@ public class Senior_MainActivity extends AppCompatActivity {
         if(is_call==1) {
             int menus_number = intent.getExtras().getInt("menus_number", -1);
             int menu_count = intent.getExtras().getInt("Option_count");
-            String menus_name = "아메리카노|카라멜 마끼아또|카페모카|카페라떼|카페모카|화이트초코|아포카토|리스레스토 비얀코|그린 티 크림|모카 푸라푸치노|바닐라크림|에스프레소 프라푸치노|자바칩 푸라푸치노|카라멜 푸라푸치노|화이트 딸기 크림|초콜릿 크림|초콜릿 모카|7레이어 가나슈|레드벨벳 크림치즈|생크림 카스텔라|블루베리 쿠키 치즈케이크|포콜릿 데블스 케이크|촉촉 생크림 케이크|크레이프 치즈|클라우드 치즈|호두 당근 케이크|나이트로 쇼콜라|나이트로 콜드브루|돌체 콜드브루|바닐라크림 콜드브루|콜드브루 폼|콜드브루 몰트";
-            int[] menus_prise = {2500, 3500, 4000, 2800, 4300, 5300, 4400, 5500, 6300, 5600, 4900, 5800, 6100, 5600, 5600, 5700, 5700, 4800, 5500, 4500, 6800, 5900, 5200, 6500, 5500, 6500, 6100, 5800, 5800, 8500, 5800, 8000};
-            int[] menus_img_number = {R.drawable.img1_1, R.drawable.img2_1, R.drawable.img3_1, R.drawable.img4_1, R.drawable.img5_1, R.drawable.img6_1, R.drawable.img7_1, R.drawable.img8_1, R.drawable.img1_2, R.drawable.img2_2, R.drawable.img3_2, R.drawable.img4_2, R.drawable.img5_2, R.drawable.img6_2, R.drawable.img7_2, R.drawable.img8_2, R.drawable.img1_3, R.drawable.img9_2, R.drawable.img2_3, R.drawable.img3_3, R.drawable.img4_3, R.drawable.img5_3, R.drawable.img6_3, R.drawable.img7_3, R.drawable.img8_3, R.drawable.img9_3, R.drawable.img1_4, R.drawable.img2_4, R.drawable.img3_4, R.drawable.img4_4, R.drawable.img5_4, R.drawable.img6_4};
+            String menus_name = "따뜻한 아메리카노|차가운 아메리카노|따뜻한 카페라떼|차가운 카페라떼|따뜻한 카페모카|차가운 카페모카|따뜻한 카라멜 마끼아또|차가운 카라멜 마끼아또|자바칩 프라푸치노|초콜릿 크림 프라푸치노|카라멜 프라푸치노|바닐라 크림 프라푸치노|딸기 요거트|망고 블렌디드|자몽 셔벗 블렌디드|쿨 라임 피지오|라임 패션 티|아이스 라임 티|민트 블렌드|얼그레이|캐모마일 블렌드|자몽 허니 블랙 티|히비스커스 블렌드|가나슈 케이크|치즈 케이크|블루베리 치즈케이크|레드벨벳 케이크|스콘|카스테라|티라미수|스타벅스 텀블러|그린 워터마크 텀블러|블랙 머그|그린 텀블러 세트|클래식 텀블러 세트|컨투어 텀블러 세트|그린 클래식 머그 세트";
+            int[] menus_prise = {2500, 2500, 3000, 3000, 3500, 3500, 4000, 4000, 4500, 4500, 4500, 4500, 5000, 5000, 5000, 5000, 5000, 5000, 4000, 4000, 5500, 5500, 5500, 5000, 5000, 5000, 5000, 2000, 4000, 4000, 15000, 37000, 11000, 48800, 37900, 37900, 38800};
+            int[] menus_img_number = {R.drawable.imgn1_1, R.drawable.imgn2_1, R.drawable.imgn3_1, R.drawable.imgn4_1, R.drawable.imgn5_1, R.drawable.imgn6_1, R.drawable.imgn7_1, R.drawable.imgn8_1, R.drawable.imgn9_1, R.drawable.imgn10_1, R.drawable.imgn11_1, R.drawable.imgn12_1, R.drawable.imgn1_2, R.drawable.imgn2_2, R.drawable.imgn3_2, R.drawable.imgn4_2, R.drawable.imgn5_2, R.drawable.imgn6_2, R.drawable.imgn7_2, R.drawable.imgn8_2, R.drawable.imgn9_2, R.drawable.imgn10_2, R.drawable.imgn11_2, R.drawable.imgn1_3, R.drawable.imgn2_3, R.drawable.imgn3_3, R.drawable.imgn4_3, R.drawable.imgn5_3, R.drawable.imgn6_3, R.drawable.imgn7_3, R.drawable.imgn1_4, R.drawable.imgn2_4, R.drawable.imgn3_4, R.drawable.imgn4_4, R.drawable.imgn5_4, R.drawable.imgn6_4, R.drawable.imgn7_4};
             String[] menus_names = menus_name.split("\\|");
-            int[] menus_len = {8, 9, 9, 6};
+            int[] menus_len = {12, 11, 7, 7};
             for (int i = 0; i < position_category; i++)
                 menus_number += menus_len[i];
             String Option;
@@ -339,12 +339,13 @@ public class Senior_MainActivity extends AppCompatActivity {
                 mResult.toArray(rs);
 
                 Komoran komoran = new Komoran(DEFAULT_MODEL.LIGHT);
-                String[] KOMORAN_adverb = {"시원", "차갑", "따뜻", "뜨뜻", "뜨겁"};
+                //String[] KOMORAN_adverb = {"시원", "차갑", "따뜻", "뜨뜻", "뜨겁"};
+                String[] KOMORAN_adverb = {"보통", "달달하게", "매우 달달하게"};
                 String[] hangleNumber1 = {"영", "한", "두", "세", "네", "다섯", "여섯", "일곱", "여덟", "아홉", "빵", "|", "|", "석", "넉", "|", "|", "|", "|", "|", "공", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구"};
                 String[] hangleNumber2 = {"열", "스물", "서른", "마흔", "쉰", "예순", "일흔", "여든", "아흔"};
                 String[] hangleNumber3 = {"십", "백", "천"};
-                String[] KOMORAN_size = {"크", "작", "조그마하"};
-                String[] KOMORAN_thick = {"달달하게","보통","진하게","더 진하게"};
+                String[] KOMORAN_size = {"크", "보통"};
+                String[] KOMORAN_thick = {"달달하게","보통","진하게","매우 진하게"};
                 String speak_menu = "";
                 String speak_adverb = "";
                 int speak_count = 0;
@@ -352,9 +353,9 @@ public class Senior_MainActivity extends AppCompatActivity {
                 String speak_size = "";
                 int result_serch = 2;
                 int rs_index = 0;
-                String menus_name = "아메리카노|카라멜 마끼아또|카페모카|카페라떼|카페모카|화이트초코|아포카토|리스레스토 비얀코|그린 티 크림|모카 푸라푸치노|바닐라크림|에스프레소 프라푸치노|자바칩 푸라푸치노|카라멜 푸라푸치노|화이트 딸기 크림|초콜릿 크림|초콜릿 모카|7레이어 가나슈|레드벨벳 크림치즈|생크림 카스텔라|블루베리 쿠키 치즈케이크|포콜릿 데블스 케이크|촉촉 생크림 케이크|크레이프 치즈|클라우드 치즈|호두 당근 케이크|나이트로 쇼콜라|나이트로 콜드브루|돌체 콜드브루|바닐라크림 콜드브루|콜드브루 폼|콜드브루 몰트";
+                String menus_name = "따뜻한 아메리카노|차가운 아메리카노|따뜻한 카페라떼|차가운 카페라떼|따뜻한 카페모카|차가운 카페모카|따뜻한 카라멜 마끼아또|차가운 카라멜 마끼아또|자바칩 프라푸치노|초콜릿 크림 프라푸치노|카라멜 프라푸치노|바닐라 크림 프라푸치노|딸기 요거트|망고 블렌디드|자몽 셔벗 블렌디드|쿨 라임 피지오|라임 패션 티|아이스 라임 티|민트 블렌드|얼그레이|캐모마일 블렌드|자몽 허니 블랙 티|히비스커스 블렌드|가나슈 케이크|치즈 케이크|블루베리 치즈케이크|레드벨벳 케이크|스콘|카스테라|티라미수|스타벅스 텀블러|그린 워터마크 텀블러|블랙 머그|그린 텀블러 세트|클래식 텀블러 세트|컨투어 텀블러 세트|그린 클래식 머그 세트";
                 String[] menus;
-                int[] menus_len = {8, 9, 9, 6};
+                int[] menus_len = {12, 11, 7, 7};
                 menus = menus_name.replace(" ", "").split("\\|");
                 String[] C_split;
 
@@ -519,16 +520,16 @@ public class Senior_MainActivity extends AppCompatActivity {
                     } else if (Arrays.asList(KOMORAN_size).indexOf(speak_adverb) < 1) {
                         size = "크게    ";
                     } else {
-                        size = "작게    ";
+                        size = "보통    ";
                     }
 
                     //진하기
                     speak_thick += "\t";
 
 
-                    String menus_name_ = "아메리카노|카라멜 마끼아또|카페모카|카페라떼|카페모카|화이트초코|아포카토|리스레스토 비얀코|그린 티 크림|모카 푸라푸치노|바닐라크림|에스프레소 프라푸치노|자바칩 푸라푸치노|카라멜 푸라푸치노|화이트 딸기 크림|초콜릿 크림|초콜릿 모카|7레이어 가나슈|레드벨벳 크림치즈|생크림 카스텔라|블루베리 쿠키 치즈케이크|포콜릿 데블스 케이크|촉촉 생크림 케이크|크레이프 치즈|클라우드 치즈|호두 당근 케이크|나이트로 쇼콜라|나이트로 콜드브루|돌체 콜드브루|바닐라크림 콜드브루|콜드브루 폼|콜드브루 몰트";
-                    int[] menus_prise = {2500, 3500, 4000, 2800, 4300, 5300, 4400, 5500, 6300, 5600, 4900, 5800, 6100, 5600, 5600, 5700, 5700, 4800, 5500, 4500, 6800, 5900, 5200, 6500, 5500, 6500, 6100, 5800, 5800, 8500, 5800, 8000};
-                    int[] menus_img_number = {R.drawable.img1_1, R.drawable.img2_1, R.drawable.img3_1, R.drawable.img4_1, R.drawable.img5_1, R.drawable.img6_1, R.drawable.img7_1, R.drawable.img8_1, R.drawable.img1_2, R.drawable.img2_2, R.drawable.img3_2, R.drawable.img4_2, R.drawable.img5_2, R.drawable.img6_2, R.drawable.img7_2, R.drawable.img8_2, R.drawable.img1_3, R.drawable.img9_2, R.drawable.img2_3, R.drawable.img3_3, R.drawable.img4_3, R.drawable.img5_3, R.drawable.img6_3, R.drawable.img7_3, R.drawable.img8_3, R.drawable.img9_3, R.drawable.img1_4, R.drawable.img2_4, R.drawable.img3_4, R.drawable.img4_4, R.drawable.img5_4, R.drawable.img6_4};
+                    String menus_name_ = "따뜻한 아메리카노|차가운 아메리카노|따뜻한 카페라떼|차가운 카페라떼|따뜻한 카페모카|차가운 카페모카|따뜻한 카라멜 마끼아또|차가운 카라멜 마끼아또|자바칩 프라푸치노|초콜릿 크림 프라푸치노|카라멜 프라푸치노|바닐라 크림 프라푸치노|딸기 요거트|망고 블렌디드|자몽 셔벗 블렌디드|쿨 라임 피지오|라임 패션 티|아이스 라임 티|민트 블렌드|얼그레이|캐모마일 블렌드|자몽 허니 블랙 티|히비스커스 블렌드|가나슈 케이크|치즈 케이크|블루베리 치즈케이크|레드벨벳 케이크|스콘|카스테라|티라미수|스타벅스 텀블러|그린 워터마크 텀블러|블랙 머그|그린 텀블러 세트|클래식 텀블러 세트|컨투어 텀블러 세트|그린 클래식 머그 세트";
+                    int[] menus_prise = {2500, 2500, 3000, 3000, 3500, 3500, 4000, 4000, 4500, 4500, 4500, 4500, 5000, 5000, 5000, 5000, 5000, 5000, 4000, 4000, 5500, 5500, 5500, 5000, 5000, 5000, 5000, 2000, 4000, 4000, 15000, 37000, 11000, 48800, 37900, 37900, 38800};
+                    int[] menus_img_number = {R.drawable.imgn1_1, R.drawable.imgn2_1, R.drawable.imgn3_1, R.drawable.imgn4_1, R.drawable.imgn5_1, R.drawable.imgn6_1, R.drawable.imgn7_1, R.drawable.imgn8_1, R.drawable.imgn9_1, R.drawable.imgn10_1, R.drawable.imgn11_1, R.drawable.imgn12_1, R.drawable.imgn1_2, R.drawable.imgn2_2, R.drawable.imgn3_2, R.drawable.imgn4_2, R.drawable.imgn5_2, R.drawable.imgn6_2, R.drawable.imgn7_2, R.drawable.imgn8_2, R.drawable.imgn9_2, R.drawable.imgn10_2, R.drawable.imgn11_2, R.drawable.imgn1_3, R.drawable.imgn2_3, R.drawable.imgn3_3, R.drawable.imgn4_3, R.drawable.imgn5_3, R.drawable.imgn6_3, R.drawable.imgn7_3, R.drawable.imgn1_4, R.drawable.imgn2_4, R.drawable.imgn3_4, R.drawable.imgn4_4, R.drawable.imgn5_4, R.drawable.imgn6_4, R.drawable.imgn7_4};
                     String[] menus_names = menus_name_.split("\\|");
                     int menus_number=index;
 
@@ -679,5 +680,6 @@ public class Senior_MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, EasyMenuSelectionActivity.class);
         Senior_SelectedItem_Adapter.getmItems().clear();
         startActivity(intent);
+        finish();
     }
 }
