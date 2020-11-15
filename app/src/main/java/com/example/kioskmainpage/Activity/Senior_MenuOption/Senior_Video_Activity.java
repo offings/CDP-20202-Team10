@@ -1,9 +1,11 @@
 package com.example.kioskmainpage.Activity.Senior_MenuOption;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Spannable;
 import android.text.Spanned;
@@ -25,7 +27,9 @@ public class Senior_Video_Activity extends AppCompatActivity {
     private TextView title;
     private SurfaceHolder mSurfaceHolder;
     private String mSdPath = Environment.getExternalStorageDirectory().getAbsolutePath();
-    private String mVideoFile ="menu.mp4";
+    private String[] mVideoFileList = {"menu1.mp4", "menu2.mp4", "menu3.mp4", "menu4.mp4"};
+    private String mVideoFile = "menu1.mp4";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +45,30 @@ public class Senior_Video_Activity extends AppCompatActivity {
 
         title = (TextView)findViewById(R.id.title_view);
         Spannable span = (Spannable) title.getText();
-        span.setSpan(new ForegroundColorSpan(getColor(R.color.red)), 5, 9, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        span.setSpan(new ForegroundColorSpan(getColor(R.color.red)), 4, 9, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.video_tab_layout);
+        tabLayout.addTab(tabLayout.newTab().setText("1"));
+        tabLayout.addTab(tabLayout.newTab().setText("2"));
+        tabLayout.addTab(tabLayout.newTab().setText("3"));
+        tabLayout.addTab(tabLayout.newTab().setText("4"));
+        tabLayout.getTabAt(0).select();
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                mVideoFile = mVideoFileList[tab.getPosition()];
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                stopVideo(mSurfaceView);
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
         mSurfaceView = (SurfaceView)findViewById(R.id.surfaceView);
         mSurfaceHolder = mSurfaceView.getHolder();
@@ -58,12 +85,6 @@ public class Senior_Video_Activity extends AppCompatActivity {
         super.onDestroy();
     }
 
-    public void stopVideo(View view) {
-        Intent intent = new Intent(this, Senior_MainActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
     public void startVideo(View view) {
         try {
             mMediaPlayer.setDataSource(mSdPath + "/" + mVideoFile);
@@ -77,6 +98,15 @@ public class Senior_Video_Activity extends AppCompatActivity {
         mMediaPlayer.start();
     }
 
+    public void stopVideo(View view) {
+        mMediaPlayer.stop();
+        mMediaPlayer.reset();
+    }
+
+
+    public void onClick_back(View view) {
+        finish();
+    }
 }
 
 

@@ -13,7 +13,7 @@
             android:id="@+id/title_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="100dp"
             android:gravity="center"
             android:text="아래의 조작 방법 동영상을 시청해주세요"
             android:textColor="@color/black"
@@ -25,10 +25,24 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
+        <android.support.design.widget.TabLayout
+            android:id="@+id/video_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/light_red"
+            app:tabSelectedTextColor="@color/light_red"
+            app:tabTextColor="@color/black"
+            android:layout_marginBottom="5dp"
+            app:tabTextAppearance="@style/TabTextStyle"
+            app:layout_constraintBottom_toTopOf="@id/surfaceView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        </android.support.design.widget.TabLayout>
+
         <SurfaceView
             android:id="@+id/surfaceView"
             android:layout_width="match_parent"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="80dp"
             android:layout_height="500dp"
             app:layout_constraintTop_toBottomOf="@id/title_view"/>
 
@@ -43,12 +57,12 @@
             app:layout_constraintEnd_toEndOf="parent">
 
             <LinearLayout
-                android:id="@+id/cancel_btn"
+                android:id="@+id/back_btn"
                 android:layout_width="290dp"
                 android:layout_height="70dp"
                 android:orientation="vertical"
                 android:clickable="true"
-                android:onClick="stopVideo"
+                android:onClick="onClick_back"
                 android:background="@drawable/back_btn_background">
 
                 <TextView
@@ -64,7 +78,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/pass_btn"
+                android:id="@+id/watch_btn"
                 android:layout_width="290dp"
                 android:layout_height="70dp"
                 android:orientation="vertical"

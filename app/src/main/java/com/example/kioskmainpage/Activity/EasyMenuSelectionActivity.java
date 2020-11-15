@@ -29,7 +29,9 @@ import android.widget.Toast;
 
 
 import com.example.kioskmainpage.Activity.EasyMenuSelectionActivity;
+import com.example.kioskmainpage.Activity.Pay.Senior_Pay_CardActivity;
 import com.example.kioskmainpage.Activity.Senior_MenuOption.Senior_MenuSelected_Check;
+import com.example.kioskmainpage.Activity.Senior_MenuOption.Senior_Video_Activity;
 import com.example.kioskmainpage.Activity.Waiting.Senior_MainActivity;
 import com.example.kioskmainpage.Adapter.RecyclerAdapter_MenuType;
 import com.example.kioskmainpage.R;
@@ -558,6 +560,11 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
         }
         Temp.replaceAll(" ", "");
         return Temp.toCharArray();
+    }
+
+    public void onClickVideo(View view) {
+        Intent vedio_intent = new Intent(this, Senior_Video_Activity.class);
+        startActivity(vedio_intent);
     }
 }
 
