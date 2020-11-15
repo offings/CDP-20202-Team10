@@ -241,4 +241,7 @@ public class Senior_OrderListActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickVideo(View view) {
+
+    }
 }

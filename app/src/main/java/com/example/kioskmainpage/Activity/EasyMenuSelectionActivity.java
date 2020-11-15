@@ -127,7 +127,6 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
             @Override
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-
                     tts.setLanguage(Locale.KOREAN);
                     tts.speak("원하시는 종류를 선택해주세요", TextToSpeech.QUEUE_FLUSH, null);
 
