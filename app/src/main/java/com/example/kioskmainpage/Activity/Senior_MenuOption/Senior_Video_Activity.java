@@ -3,6 +3,7 @@ package com.example.kioskmainpage.Activity.Senior_MenuOption;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.design.widget.TabLayout;
@@ -28,9 +29,10 @@ public class Senior_Video_Activity extends AppCompatActivity {
     private TextView title;
     private SurfaceHolder mSurfaceHolder;
     private boolean video_prepared = false;
-    private String mSdPath = Environment.getExternalStorageDirectory().getAbsolutePath();
-    private String[] mVideoFileList = {"coffee.mp4", "drink.mp4", "orderlist.mp4", "payment.mp4"};
-    private String mVideoFile = "coffee.mp4";
+    //private String mSdPath = Environment.getExternalStorageDirectory().getAbsolutePath();
+    private String video_url = null;
+    private int[] mVideoFileList = {R.raw.coffee, R.raw.drink, R.raw.orderlist, R.raw.payment};
+    private int mVideoFile = R.raw.coffee;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,7 +93,8 @@ public class Senior_Video_Activity extends AppCompatActivity {
     public void startVideo(View view) {
         if(!video_prepared) {
             try {
-                mMediaPlayer.setDataSource(mSdPath + "/" + mVideoFile);
+                video_url = "android.resource://" + getPackageName() + "/" + mVideoFile;
+                mMediaPlayer.setDataSource(this, Uri.parse(video_url));
                 mMediaPlayer.setDisplay(mSurfaceHolder);
                 mMediaPlayer.prepare();
             } catch (IOException e) {
