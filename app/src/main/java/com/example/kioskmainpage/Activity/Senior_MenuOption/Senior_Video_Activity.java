@@ -13,6 +13,7 @@ import android.text.style.ForegroundColorSpan;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.kioskmainpage.Activity.Pay.Senior_Pay_Loading;
@@ -27,8 +28,8 @@ public class Senior_Video_Activity extends AppCompatActivity {
     private TextView title;
     private SurfaceHolder mSurfaceHolder;
     private String mSdPath = Environment.getExternalStorageDirectory().getAbsolutePath();
-    private String[] mVideoFileList = {"menu1.mp4", "menu2.mp4", "menu3.mp4", "menu4.mp4"};
-    private String mVideoFile = "menu1.mp4";
+    private String[] mVideoFileList = {"coffee.mp4", "drink.mp4", "orderlist.mp4", "payment.mp4"};
+    private String mVideoFile = "coffee.mp4";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,10 +49,10 @@ public class Senior_Video_Activity extends AppCompatActivity {
         span.setSpan(new ForegroundColorSpan(getColor(R.color.red)), 4, 9, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.video_tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("1"));
-        tabLayout.addTab(tabLayout.newTab().setText("2"));
-        tabLayout.addTab(tabLayout.newTab().setText("3"));
-        tabLayout.addTab(tabLayout.newTab().setText("4"));
+        tabLayout.addTab(tabLayout.newTab().setText("커피 주문"));
+        tabLayout.addTab(tabLayout.newTab().setText("기타 주문"));
+        tabLayout.addTab(tabLayout.newTab().setText("장바구니"));
+        tabLayout.addTab(tabLayout.newTab().setText("결제 과정"));
         tabLayout.getTabAt(0).select();
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -86,16 +87,23 @@ public class Senior_Video_Activity extends AppCompatActivity {
     }
 
     public void startVideo(View view) {
-        try {
-            mMediaPlayer.setDataSource(mSdPath + "/" + mVideoFile);
-            mMediaPlayer.setDisplay(mSurfaceHolder);
-            mMediaPlayer.prepare();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return;
+        if(!mMediaPlayer.isPlaying()) {
+            try {
+                mMediaPlayer.setDataSource(mSdPath + "/" + mVideoFile);
+                mMediaPlayer.setDisplay(mSurfaceHolder);
+                mMediaPlayer.prepare();
+            } catch (IOException e) {
+                e.printStackTrace();
+                return;
+            }
         }
-        mMediaPlayer.setLooping(true);
+
+        mMediaPlayer.setLooping(false);
         mMediaPlayer.start();
+
+        if(mMediaPlayer.getCurrentPosition() == mMediaPlayer.getDuration()){
+            mMediaPlayer.start();
+        }
     }
 
     public void stopVideo(View view) {
