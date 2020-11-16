@@ -277,6 +277,8 @@ public class Senior_MenuSelected_Check extends AppCompatActivity {
                     intent.putExtra("menu_image",menu_image);
                     intent.putExtra("menu_name",menu_name);
                     intent.putExtra("menu_price",menu_price);
+                    intent.putExtra("menu_option",menu_option);
+                    intent.putExtra("menu_count",menu_count);
                     startActivity(intent);
                     finish();
                     break;

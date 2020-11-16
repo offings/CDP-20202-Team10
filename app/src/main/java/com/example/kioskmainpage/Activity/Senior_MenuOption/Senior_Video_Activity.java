@@ -53,7 +53,7 @@ public class Senior_Video_Activity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.video_tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("커피 주문"));
-        tabLayout.addTab(tabLayout.newTab().setText("기타 주문"));
+        tabLayout.addTab(tabLayout.newTab().setText("추가 주문"));
         tabLayout.addTab(tabLayout.newTab().setText("장바구니"));
         tabLayout.addTab(tabLayout.newTab().setText("결제 과정"));
         tabLayout.getTabAt(0).select();

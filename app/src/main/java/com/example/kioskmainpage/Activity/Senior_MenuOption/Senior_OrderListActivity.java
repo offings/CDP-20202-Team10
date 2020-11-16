@@ -212,8 +212,8 @@ public class Senior_OrderListActivity extends AppCompatActivity {
 
     public void onClick_payment(View v) {
 
-        EasyMenuSelectionActivity easyMenuSelectionActivity = (EasyMenuSelectionActivity)EasyMenuSelectionActivity.activity;
-        easyMenuSelectionActivity.finish();
+//        EasyMenuSelectionActivity easyMenuSelectionActivity = (EasyMenuSelectionActivity)EasyMenuSelectionActivity.activity;
+//        easyMenuSelectionActivity.finish();
 
         //Toast.makeText(this, "Payment Result Total : "+ total_price+"원",Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, Senior_Pay_TakeoutActivity.class);
