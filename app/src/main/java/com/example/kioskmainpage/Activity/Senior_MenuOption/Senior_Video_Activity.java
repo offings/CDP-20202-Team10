@@ -92,6 +92,7 @@ public class Senior_Video_Activity extends AppCompatActivity {
         if(!video_prepared) {
             try {
                 mMediaPlayer.setDataSource(mSdPath + "/" + mVideoFile);
+                mMediaPlayer.setDisplay(mSurfaceHolder);
                 mMediaPlayer.prepare();
             } catch (IOException e) {
                 e.printStackTrace();
