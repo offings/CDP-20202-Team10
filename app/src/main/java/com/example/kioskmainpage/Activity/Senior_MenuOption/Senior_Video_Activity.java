@@ -27,6 +27,7 @@ public class Senior_Video_Activity extends AppCompatActivity {
     private SurfaceView mSurfaceView;
     private TextView title;
     private SurfaceHolder mSurfaceHolder;
+    private boolean video_prepared = false;
     private String mSdPath = Environment.getExternalStorageDirectory().getAbsolutePath();
     private String[] mVideoFileList = {"coffee.mp4", "drink.mp4", "orderlist.mp4", "payment.mp4"};
     private String mVideoFile = "coffee.mp4";
@@ -58,6 +59,7 @@ public class Senior_Video_Activity extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 mVideoFile = mVideoFileList[tab.getPosition()];
+                video_prepared = false;
             }
 
             @Override
@@ -87,23 +89,18 @@ public class Senior_Video_Activity extends AppCompatActivity {
     }
 
     public void startVideo(View view) {
-        if(!mMediaPlayer.isPlaying()) {
+        if(!video_prepared) {
             try {
                 mMediaPlayer.setDataSource(mSdPath + "/" + mVideoFile);
-                mMediaPlayer.setDisplay(mSurfaceHolder);
                 mMediaPlayer.prepare();
             } catch (IOException e) {
                 e.printStackTrace();
                 return;
             }
+            video_prepared = true;
         }
-
         mMediaPlayer.setLooping(false);
         mMediaPlayer.start();
-
-        if(mMediaPlayer.getCurrentPosition() == mMediaPlayer.getDuration()){
-            mMediaPlayer.start();
-        }
     }
 
     public void stopVideo(View view) {
