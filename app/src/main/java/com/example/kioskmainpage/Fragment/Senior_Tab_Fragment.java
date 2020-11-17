@@ -71,7 +71,7 @@ public class Senior_Tab_Fragment extends Fragment {
             senior_menuAdapter.addItem(new Senior_MenuItem("자바칩 프라푸치노", "4500", R.drawable.imgn9_1));
             senior_menuAdapter.addItem(new Senior_MenuItem("초콜릿 크림 프라푸치노", "4500", R.drawable.imgn10_1));
             senior_menuAdapter.addItem(new Senior_MenuItem("카라멜 프라푸치노", "4500", R.drawable.imgn11_1));
-            senior_menuAdapter.addItem(new Senior_MenuItem("바닐라 크림 프라푸치노", "4500", R.drawable.imgn12_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("바닐라 크림", "4500", R.drawable.imgn12_1));
         }
 
        if(mpage == 2) {
