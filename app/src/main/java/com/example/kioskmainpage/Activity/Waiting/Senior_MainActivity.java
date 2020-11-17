@@ -346,7 +346,7 @@ public class Senior_MainActivity extends AppCompatActivity {
                 String[] hangleNumber2 = {"열", "스물", "서른", "마흔", "쉰", "예순", "일흔", "여든", "아흔"};
                 String[] hangleNumber3 = {"십", "백", "천"};
                 String[] KOMORAN_size = {"크", "보통"};
-                String[] KOMORAN_thick = {"달달하게","보통","진하게","매우 진하게"};
+                String[] KOMORAN_thick = {"연하게","보통","진하게","매우 진하게"};
                 String speak_menu = "";
                 String speak_adverb = "";
                 int speak_count = 0;
@@ -678,14 +678,15 @@ public class Senior_MainActivity extends AppCompatActivity {
     }
 
     public void onClickHome(View view) {
-        Intent intent = new Intent(this, EasyMenuSelectionActivity.class);
         Senior_SelectedItem_Adapter.getmItems().clear();
+        Intent intent = new Intent(this, EasyMenuSelectionActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(intent);
         finish();
     }
 
     public void onClickVideo(View view) {
-        Intent vedio_intent = new Intent(this, Senior_Video_Activity.class);
-        startActivity(vedio_intent);
+        Intent video_intent = new Intent(this, Senior_Video_Activity.class);
+        startActivity(video_intent);
     }
 }

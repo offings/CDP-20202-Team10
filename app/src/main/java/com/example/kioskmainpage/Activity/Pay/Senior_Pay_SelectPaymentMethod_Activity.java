@@ -239,13 +239,15 @@ public class Senior_Pay_SelectPaymentMethod_Activity extends AppCompatActivity {
         finish();
     }
     public void onClickHome(View view) {
-        Intent intent = new Intent(this, EasyMenuSelectionActivity.class);
         Senior_SelectedItem_Adapter.getmItems().clear();
+        Intent intent = new Intent(this, EasyMenuSelectionActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(intent);
+        finish();
     }
 
     public void onClickVideo(View view) {
-        Intent vedio_intent = new Intent(this, Senior_Video_Activity.class);
-        startActivity(vedio_intent);
+        Intent video_intent = new Intent(this, Senior_Video_Activity.class);
+        startActivity(video_intent);
     }
 }

@@ -245,9 +245,9 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
             String speak_size = "";
             int result_serch = 2;
             int rs_index = 0;
-            String menus_name = "아메리카노|카라멜 마끼아또|카페모카|카페라떼|카페모카|화이트초코|아포카토|리스레스토 비얀코|그린 티 크림|모카 푸라푸치노|바닐라크림|에스프레소 프라푸치노|자바칩 푸라푸치노|카라멜 푸라푸치노|화이트 딸기 크림|초콜릿 크림|초콜릿 모카|7레이어 가나슈|레드벨벳 크림치즈|생크림 카스텔라|블루베리 쿠키 치즈케이크|포콜릿 데블스 케이크|촉촉 생크림 케이크|크레이프 치즈|클라우드 치즈|호두 당근 케이크|나이트로 쇼콜라|나이트로 콜드브루|돌체 콜드브루|바닐라크림 콜드브루|콜드브루 폼|콜드브루 몰트";
+            String menus_name = "따뜻한 아메리카노|차가운 아메리카노|따뜻한 카페라떼|차가운 카페라떼|따뜻한 카페모카|차가운 카페모카|따뜻한 카라멜 마끼아또|차가운 카라멜 마끼아또|자바칩 프라푸치노|초콜릿 크림 프라푸치노|카라멜 프라푸치노|바닐라 크림|딸기 요거트|망고 블렌디드|자몽 셔벗 블렌디드|쿨 라임 피지오|라임 패션 티|아이스 라임 티|민트 블렌드|얼그레이|캐모마일 블렌드|자몽 허니 블랙 티|히비스커스 블렌드|가나슈 케이크|치즈 케이크|블루베리 치즈케이크|레드벨벳 케이크|스콘|카스테라|티라미수|스타벅스 텀블러|그린 워터마크 텀블러|블랙 머그|그린 텀블러 세트|클래식 텀블러 세트|컨투어 텀블러 세트|그린 클래식 머그 세트";
             String[] menus;
-            int[] menus_len = {8, 9, 9, 6};
+            int[] menus_len = {12, 11, 7, 7};
             menus = menus_name.replace(" ", "").split("\\|");
             String[] C_split;
 
@@ -563,8 +563,8 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
     }
 
     public void onClickVideo(View view) {
-        Intent vedio_intent = new Intent(this, Senior_Video_Activity.class);
-        startActivity(vedio_intent);
+        Intent video_intent = new Intent(this, Senior_Video_Activity.class);
+        startActivity(video_intent);
     }
 }
 
