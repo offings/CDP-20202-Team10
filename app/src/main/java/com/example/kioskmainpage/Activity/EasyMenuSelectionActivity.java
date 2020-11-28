@@ -217,7 +217,7 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
                     voice_recordText1.setText("'취소 되었어요!'");
                     break;
             }
-            voice_recordText1.setText(null);
+            voice_recordText1.setText(message);
             voice_recordText1.setBackground(null);
         }
 
@@ -230,14 +230,15 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
             ArrayList<String> mResult = results.getStringArrayList(key);
 
             String[] rs = new String[mResult.size()];
-            mResult.toArray(rs);
+            mResult.toArray(rs);//
 
-            String[] KOMORAN_adverb = {"시원", "차갑", "따뜻", "뜨뜻", "뜨겁"};
+            //String[] KOMORAN_adverb = {"시원", "차갑", "따뜻", "뜨뜻", "뜨겁"};
+            String[] KOMORAN_adverb = {"보통", "달달하게", "매우 달달하게"};
             String[] hangleNumber1 = {"영", "한", "두", "세", "네", "다섯", "여섯", "일곱", "여덟", "아홉", "빵", "|", "|", "석", "넉", "|", "|", "|", "|", "|", "공", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구"};
             String[] hangleNumber2 = {"열", "스물", "서른", "마흔", "쉰", "예순", "일흔", "여든", "아흔"};
             String[] hangleNumber3 = {"십", "백", "천"};
-            String[] KOMORAN_size = {"크", "작", "조그마하"};
-            String[] KOMORAN_thick = {"진하게", "더 진하게"};
+            String[] KOMORAN_size = {"크", "보통"};
+            String[] KOMORAN_thick = {"연하게", "보통", "진하게", "매우 진하게"};
             String speak_menu = "";
             String speak_adverb = "";
             int speak_count = 0;
@@ -322,7 +323,7 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
             //문장에서 메뉴를 찾았으면 문장 분석을 시작합니다.
             else {
                 List<String> tokenList_1 = AA.getMorphesByTags("VA", "XR", "NA");
-                //온도선택
+                //온도선택>당도
                 for (String temp_tokenList : tokenList_1) {
                     for (String temp_KOMORAN_adverb : KOMORAN_adverb) {
                         if (levenshteinDistance(HangleSplit(temp_tokenList),HangleSplit(temp_KOMORAN_adverb)) < result_serch) {
@@ -417,13 +418,13 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
                 intent.putExtra("menus_number", index);
                 intent.putExtra("category", category);
 
-                //온도
+                //온도>당도
                 if (speak_adverb.equals("")) {
                     adverb = "";
-                } else if (Arrays.asList(KOMORAN_adverb).indexOf(speak_adverb) < 2) {
-                    adverb = "시원하게  ";
+                } else if (Arrays.asList(KOMORAN_adverb).indexOf(speak_adverb) < 1) {
+                    adverb = "당도 보통 ";
                 } else {
-                    adverb = "따뜻하게  ";
+                    adverb = "달달하게  ";
                 }
                 intent.putExtra("Option_adverb", adverb);
 
@@ -434,9 +435,9 @@ public class EasyMenuSelectionActivity extends AppCompatActivity {
                 if (speak_size.equals("")) {
                     size = "";
                 } else if (Arrays.asList(KOMORAN_size).indexOf(speak_adverb) < 1) {
-                    size = "크게    ";
+                    size = "크기 보통 ";
                 } else {
-                    size = "작게    ";
+                    size = "크게     ";
                 }
                 intent.putExtra("Option_size", size);
 

@@ -304,7 +304,7 @@ public class Senior_MainActivity extends AppCompatActivity {
                     voice_recordText.setText("'취소 되었어요!'");
                     break;
             }
-            voice_recordText.setText(null);
+            voice_recordText.setText(message);
             voice_recordText.setBackground(null);
 
             Toast.makeText(getApplicationContext(), "취소 되었어요! ",Toast.LENGTH_SHORT).show();
@@ -487,13 +487,13 @@ public class Senior_MainActivity extends AppCompatActivity {
                     //카테고리 선택
                     int is_call = 1;
                     intent.putExtra("is_call", is_call);
-                    //온도
+                    //온도>당도
                     if (speak_adverb.equals("")) {
                         adverb = "";
-                    } else if (Arrays.asList(KOMORAN_adverb).indexOf(speak_adverb) < 2) {
-                        adverb = "시원하게  ";
+                    } else if (Arrays.asList(KOMORAN_adverb).indexOf(speak_adverb) < 1) {
+                        adverb = "당도 보통 ";
                     } else {
-                        adverb = "따뜻하게  ";
+                        adverb = "달달하게  ";
                     }
 
                     //개수
@@ -502,9 +502,9 @@ public class Senior_MainActivity extends AppCompatActivity {
                     if (speak_size.equals("")) {
                         size = "";
                     } else if (Arrays.asList(KOMORAN_size).indexOf(speak_adverb) < 1) {
-                        size = "크게    ";
+                        size = "크기 보통 ";
                     } else {
-                        size = "보통    ";
+                        size = "크게     ";
                     }
 
                     //진하기
