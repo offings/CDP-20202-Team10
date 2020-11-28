@@ -4,8 +4,6 @@ package com.example.kioskmainpage.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,8 +11,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ScrollView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.kioskmainpage.Activity.Senior_MenuOption.Senior_MenuSelected_Check;
 import com.example.kioskmainpage.Adapter.Senior_MenuAdapter;
@@ -70,8 +66,8 @@ public class Senior_Tab_Fragment extends Fragment {
             senior_menuAdapter.addItem(new Senior_MenuItem("차가운 카라멜 마끼아또", "4000", R.drawable.imgn8_1));
             senior_menuAdapter.addItem(new Senior_MenuItem("자바칩 프라푸치노", "4500", R.drawable.imgn9_1));
             senior_menuAdapter.addItem(new Senior_MenuItem("초콜릿 크림 프라푸치노", "4500", R.drawable.imgn10_1));
-            senior_menuAdapter.addItem(new Senior_MenuItem("카라멜 프라푸치노", "4500", R.drawable.imgn11_1));
-            senior_menuAdapter.addItem(new Senior_MenuItem("바닐라 크림", "4500", R.drawable.imgn12_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("바닐라 크림", "4500", R.drawable.imgn11_1));
+            senior_menuAdapter.addItem(new Senior_MenuItem("카라멜 프라푸치노", "4500", R.drawable.imgn12_1));
         }
 
        if(mpage == 2) {
