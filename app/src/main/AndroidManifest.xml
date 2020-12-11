@@ -149,15 +149,7 @@
         <activity
             android:name=".Activity.Waiting.Waiting_MainActivity"
             android:screenOrientation="reversePortrait" />
-        <activity android:name=".Activity.EasyMenuSelectionActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.HOME" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".Activity.EasyMenuSelectionActivity" />
 
         <receiver
             android:name=".ShutdownAdminReceiver"
@@ -185,13 +177,13 @@
         <activity
             android:name=".Activity.SplashActivity"
             android:launchMode="singleInstance">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-<!--                <category android:name="android.intent.category.HOME" />-->
-<!--                <category android:name="android.intent.category.DEFAULT" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".Activity.Pay.Card_fail_popupActivity"
